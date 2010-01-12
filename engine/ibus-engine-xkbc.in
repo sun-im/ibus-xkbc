@@ -1,0 +1,28 @@
+#!/bin/bash
+# vim:set noet ts=4:
+#
+# ibus-tmpl - The Input Bus template project
+#
+# Copyright (c) 2007-2008 Huang Peng <shawn.p.huang@gmail.com>
+# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+export PYTHONPATH=@prefix@/lib/python2.6/site-packages:$PYTHONPATH
+export LIBEXECDIR=@libexecdir@
+export XKBC_SETUPDIR=@prefix@/share/ibus-xkbc/setup
+export XKBC_DATAFILE=@prefix@/share/ibus-xkbc/data/xkbc.dat
+export XKB_DATA_DIR=@prefix@/X11/share/X11/xkb
+exec python2.6 @prefix@/share/ibus-xkbc/engine/main.py $@

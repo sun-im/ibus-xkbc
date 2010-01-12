@@ -1,0 +1,5 @@
+Exec=@prefix@/bin/ibus-engine-xkbc
+Name=xkbc
+Icon=@prefix@/share/ibus-xkbc/icons/ibus-xkbc.svg
+Author=Naoyuki Ishimura <naoyuki.ishimura@sun.com>
+Credits=
