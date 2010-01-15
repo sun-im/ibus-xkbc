@@ -19,6 +19,7 @@
 			<layout>us</layout>
 			<longname>XKBC (Keyboard Emulation)</longname>
 			<description>XKeyboad Config based Keyboard layout emulation Input Method</description>
+			<language>other</language>
 			<rank>99</rank>
 		</engine>
 	</engines>
