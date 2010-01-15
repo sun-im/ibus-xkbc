@@ -2,7 +2,12 @@
 set -e
 set -x
 
-glib-gettextize --force --copy || exit 1
+if [[ "`uname -s`" = "SunOS" ]]
+then
+    glib-gettextize --force --copy || exit 1
+else
+    autopoint --force || exit 1
+fi
 libtoolize --automake --copy --force
 aclocal -I m4 --force
 autoheader --force

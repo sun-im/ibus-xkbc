@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Sun">
+  <!ENTITY author2 "Input Method dev">
+  <!ENTITY publisher "Sun Microsystems, Inc.">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "January 2010">
+]>
+
+<article id="index" lang="en">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>&appname; Manual</title> 
+	 <abstract role="description">
+	   <para>&appname; emulates various keyboard layout.</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo>This manual describes version &appversion; of the &appname;.</releaseinfo>
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>&appname; Manual V&manrevision;</revnumber>
+ 		<date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> 
+	 <primary>&appname;</primary> 
+  </indexterm>
+<sect1 id="intro">
+	<title>Introduction</title>
+	<para>
+This Input Method engine for iBus (ibus-xkbc) emulates keyboard layout using XKeyboard Configuration Database (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>). It supports all of layouts which XKeyboardConfig defines including variants.
+	</para>
+	<para>
+The Input Method is activated with iBus trigger key. Once it's activated, switching different keyboard layout can be done with hotkeys or popup menu on the iBus engine panel.
+	</para>
+	<figure id="engine_menu">
+		<title>Engine popup menu</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>Start &appname;</title>
+	<para>Step to setup &appname;.</para>
+	<orderedlist>
+		<listitem>
+			<para>Select iBus setup from iBus icon or execute '/usr/bin/ibus-setup'.</para>
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Click the 'Input Method' tab</para>
+		</listitem>
+		<listitem>
+			<para>Click 'Select an input method' combo box and select 'Other' -> 'XKBC (Keyboard Emulation)'</para>
+		</listitem>
+		<listitem>
+			<para>Click 'Add' button at the right top on the panel</para>
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Put it at the top of the list with 'Up' button if you wish to use it as the default Input Method.</para>
+			<note><para>If it is set to the default Input Method, just an Input Method trigger key will activate ibus-xkbc. Otherwise, you need to select ibus-xkbc in iBus icon menu or change Input Method to ibus-xkbc with iBus hot keys for changing Input Method.</para></note>
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>Usage</title>
+	<para>How to use &appname;.</para>
+	<orderedlist>
+		<listitem>
+			<para>Give input focus to the application's input field.</para>
+		</listitem>
+		<listitem>
+			<para> Type iBus Input Method trigger key which can be configured with iBus setup dialog (/usr/bin/ibus-setup) The default is Control+space, Zenkaku_Hankaku, Alt+Zenkaku_Hankaku and Alt+grave. </para>
+			<note><para>If you do not setup ibus-xkbc as the default Input Method, then select 'XKBC (Keyboard Emulation)' from the iBus icon menu.</para></note>
+		</listitem>
+		<listitem>
+			<para>Bring up ibus-xkbc setup dialog with clicking ibus-xkbc panel 'Configure Layout Switch' button (the second right button on the panel).</para>
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>In 'Target Layout' tab, check the layouts which you want to use for layout emulation. Clicking left most triangle expands for showing layout variants.</para>
+		</listitem>
+		<listitem>
+			<para>In 'Physical Layout' tab, check the using keyboard.</para>
+			<note><para>If you're using XKB setting, then select the XKB recognized keyboard layout here. If this infomation is not correct, layout emulaiton will not work propery.</para></note>
+		</listitem>
+		<listitem>
+			<para>In 'Hot Keys' tab, you can configure layout switching hot keys. This is relevant only if you checked plural keyboard layout in the step 4.</para>
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>Then typing key characters will be emulated by ibus-xkbc and the application will receive emulated characters. When you type Input Method trigger key once more, then Input Method will be deactivated and layout emulation will stop.</para>
+</sect1>
+<sect1 id="layouts">
+	<title>Supported Layouts</title>
+	<para>The supported layouts depends on XKeyboardConfig rules/symbols data which ibus-xkbc based on. This release of ibus-xkbc has the data from XKeyboardConfig 1.6 and the number of layouts includs variants is 478.</para>
+</sect1>
+
+</article>

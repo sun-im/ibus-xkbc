@@ -165,6 +165,13 @@ def xkbc_get_layouts():
         parser.setContentHandler(dh)
         parser.parse(open(rule_file))
         _all_layouts = dh.get_layouts()
+
+        # report results
+        n_l = 0
+        for l in _all_layouts.keys():
+            vl = _all_layouts[l].get_variants()
+            n_l += (1 + len(vl))
+        print "Num of layouts : " + str(n_l)
         
     return _all_layouts
     

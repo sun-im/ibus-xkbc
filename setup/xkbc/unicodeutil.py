@@ -1068,245 +1068,245 @@ keysym_to_unicode = {
 }
 
 non_trans_list = [
-     0xfe02 , #  ISO_Level2_Latch
-     0xfe03 , #  ISO_Level3_Shift
-     0xfe0a , #  ISO_Prev_Group
-     0xfe0b , #  ISO_Prev_Group_Lock
-     0xfd18 , #  3270_Record
-     0xfd19 , #  3270_ChangeScreen
-     0xfd1a , #  3270_DeleteWord
-     0xfd1b , #  3270_ExSelect
-     0xfd1c , #  3270_CursorSelect
-     0xfd1d , #  3270_PrintScreen
-     0xfd1e , #  3270_Enter
-     0xfe01 , #  ISO_Lock
-     0xfe04 , #  ISO_Level3_Latch
-     0xfe05 , #  ISO_Level3_Lock
-     0xfe06 , #  ISO_Group_Latch
-     0xfe07 , #  ISO_Group_Lock
-     0xfe08 , #  ISO_Next_Group
-     0xfe09 , #  ISO_Next_Group_Lock
-     0xfe0c , #  ISO_First_Group
-     0xfe0d , #  ISO_First_Group_Lock
-     0xfe0e , #  ISO_Last_Group
-     0xfe0f , #  ISO_Last_Group_Lock
-     0xfe11 , #  ISO_Level5_Shift
-     0xfe12 , #  ISO_Level5_Latch
-     0xfe13 , #  ISO_Level5_Lock
-     0xfe20 , #  ISO_Left_Tab
-     0xfe21 , #  ISO_Move_Line_Up
-     0xfe22 , #  ISO_Move_Line_Down
-     0xfe23 , #  ISO_Partial_Line_Up
-     0xfe24 , #  ISO_Partial_Line_Down
-     0xfe25 , #  ISO_Partial_Space_Left
-     0xfe26 , #  ISO_Partial_Space_Right
-     0xfe27 , #  ISO_Set_Margin_Left
-     0xfe28 , #  ISO_Set_Margin_Right
-     0xfe29 , #  ISO_Release_Margin_Left
-     0xfe2a , #  ISO_Release_Margin_Right
-     0xfe2b , #  ISO_Release_Both_Margins
-     0xfe2c , #  ISO_Fast_Cursor_Left
-     0xfe2d , #  ISO_Fast_Cursor_Right
-     0xfe2e , #  ISO_Fast_Cursor_Up
-     0xfe2f , #  ISO_Fast_Cursor_Down
-     0xfe30 , #  ISO_Continuous_Underline
-     0xfe31 , #  ISO_Discontinuous_Underline
-     0xfe32 , #  ISO_Emphasize
-     0xfe33 , #  ISO_Center_Object
-     0xfe34 , #  ISO_Enter
-     0xfe70 , #  AccessX_Enable
-     0xfe71 , #  AccessX_Feedback_Enable
-     0xfe72 , #  RepeatKeys_Enable
-     0xfe73 , #  SlowKeys_Enable
-     0xfe74 , #  BounceKeys_Enable
-     0xfe75 , #  StickyKeys_Enable
-     0xfe76 , #  MouseKeys_Enable
-     0xfe77 , #  MouseKeys_Accel_Enable
-     0xfe78 , #  Overlay1_Enable
-     0xfe79 , #  Overlay2_Enable
-     0xfe7a , #  AudibleBell_Enable
-     0xfed0 , #  First_Virtual_Screen
-     0xfed1 , #  Prev_Virtual_Screen
-     0xfed2 , #  Next_Virtual_Screen
-     0xfed4 , #  Last_Virtual_Screen
-     0xfed5 , #  Terminate_Server
-     0xfee0 , #  Pointer_Left
-     0xfee1 , #  Pointer_Right
-     0xfee2 , #  Pointer_Up
-     0xfee3 , #  Pointer_Down
-     0xfee4 , #  Pointer_UpLeft
-     0xfee5 , #  Pointer_UpRight
-     0xfee6 , #  Pointer_DownLeft
-     0xfee7 , #  Pointer_DownRight
-     0xfee8 , #  Pointer_Button_Dflt
-     0xfee9 , #  Pointer_Button1
-     0xfeea , #  Pointer_Button2
-     0xfeeb , #  Pointer_Button3
-     0xfeec , #  Pointer_Button4
-     0xfeed , #  Pointer_Button5
-     0xfeee , #  Pointer_DblClick_Dflt
-     0xfeef , #  Pointer_DblClick1
-     0xfef0 , #  Pointer_DblClick2
-     0xfef1 , #  Pointer_DblClick3
-     0xfef4 , #  Pointer_Drag_Dflt
-     0xfef5 , #  Pointer_Drag1
-     0xfef6 , #  Pointer_Drag2
-     0xfef7 , #  Pointer_Drag3
-     0xfef8 , #  Pointer_Drag4
-     0xfef9 , #  Pointer_EnableKeys
-     0xfefa , #  Pointer_Accelerate
-     0xfefb , #  Pointer_DfltBtnNext
-     0xfefc , #  Pointer_DfltBtnPrev
-     0xfefd , #  Pointer_Drag5
-     0xff08 , #  BackSpace
-     0xff09 , #  Tab
-     0xff0a , #  Linefeed
-     0xff0b , #  Clear
-     0xff0d , #  Return
-     0xff13 , #  Pause
-     0xff14 , #  Scroll_Lock
-     0xff15 , #  Sys_Req
-     0xff1b , #  Escape
-     0xff20 , #  Multi_key
-     0xff21 , #  Kanji
-     0xff22 , #  Muhenkan
-     0xff23 , #  Henkan
-     0xff24 , #  Romaji
-     0xff25 , #  Hiragana
-     0xff26 , #  Katakana
-     0xff27 , #  Hiragana_Katakana
-     0xff28 , #  Zenkaku
-     0xff29 , #  Hankaku
-     0xff2a , #  Zenkaku_Hankaku
-     0xff2b , #  Touroku
-     0xff2c , #  Massyo
-     0xff2d , #  Kana_Lock
-     0xff2e , #  Kana_Shift
-     0xff2f , #  Eisu_Shift
-     0xff30 , #  Eisu_toggle
-     0xff31 , #  Hangul
-     0xff32 , #  Hangul_Start
-     0xff33 , #  Hangul_End
-     0xff34 , #  Hangul_Hanja
-     0xff35 , #  Hangul_Jamo
-     0xff36 , #  Hangul_Romaja
-     0xff37 , #  Hangul_Codeinput
-     0xff38 , #  Hangul_Jeonja
-     0xff39 , #  Hangul_Banja
-     0xff3a , #  Hangul_PreHanja
-     0xff3b , #  Hangul_PostHanja
-     0xff3c , #  Hangul_SingleCandidate
-     0xff3d , #  Hangul_MultipleCandidate
-     0xff3e , #  Hangul_PreviousCandidate
-     0xff3f , #  Hangul_Special
-     0xff50 , #  Home
-     0xff51 , #  Left
-     0xff52 , #  Up
-     0xff53 , #  Right
-     0xff54 , #  Down
-     0xff55 , #  Page_Up
-     0xff56 , #  Page_Down
-     0xff57 , #  End
-     0xff58 , #  Begin
-     0xff60 , #  Select
-     0xff61 , #  Print
-     0xff62 , #  Execute
-     0xff63 , #  Insert
-     0xff65 , #  Undo
-     0xff66 , #  Redo
-     0xff67 , #  Menu
-     0xff68 , #  Find
-     0xff69 , #  Cancel
-     0xff6a , #  Help
-     0xff6b , #  Break
-     0xff7e , #  Hangul_switch
-     0xff7f , #  Num_Lock
-     0xff80 , #  KP_Space
-     0xff89 , #  KP_Tab
-     0xff8d , #  KP_Enter
-     0xff91 , #  KP_F1
-     0xff92 , #  KP_F2
-     0xff93 , #  KP_F3
-     0xff94 , #  KP_F4
-     0xff95 , #  KP_Home
-     0xff96 , #  KP_Left
-     0xff97 , #  KP_Up
-     0xff98 , #  KP_Right
-     0xff99 , #  KP_Down
-     0xff9a , #  KP_Page_Up
-     0xff9b , #  KP_Page_Down
-     0xff9c , #  KP_End
-     0xff9d , #  KP_Begin
-     0xff9e , #  KP_Insert
-     0xff9f , #  KP_Delete
-     0xffaa , #  KP_Multiply
-     0xffab , #  KP_Add
-     0xffac , #  KP_Separator
-     0xffad , #  KP_Subtract
-     0xffae , #  KP_Decimal
-     0xffaf , #  KP_Divide
-     0xffb0 , #  KP_0
-     0xffb1 , #  KP_1
-     0xffb2 , #  KP_2
-     0xffb3 , #  KP_3
-     0xffb4 , #  KP_4
-     0xffb5 , #  KP_5
-     0xffb6 , #  KP_6
-     0xffb7 , #  KP_7
-     0xffb8 , #  KP_8
-     0xffb9 , #  KP_9
-     0xffbd , #  KP_Equal
-     0xffbe , #  F1
-     0xffbf , #  F2
-     0xffc0 , #  F3
-     0xffc1 , #  F4
-     0xffc2 , #  F5
-     0xffc3 , #  F6
-     0xffc4 , #  F7
-     0xffc5 , #  F8
-     0xffc6 , #  F9
-     0xffc7 , #  F10
-     0xffc8 , #  L1
-     0xffc9 , #  L2
-     0xffca , #  L3
-     0xffcb , #  L4
-     0xffcc , #  L5
-     0xffcd , #  L6
-     0xffce , #  L7
-     0xffcf , #  L8
-     0xffd0 , #  L9
-     0xffd1 , #  L10
-     0xffd2 , #  R1
-     0xffd3 , #  R2
-     0xffd4 , #  R3
-     0xffd5 , #  R4
-     0xffd6 , #  R5
-     0xffd7 , #  R6
-     0xffd8 , #  R7
-     0xffd9 , #  R8
-     0xffda , #  R9
-     0xffdb , #  R10
-     0xffdc , #  R11
-     0xffdd , #  R12
-     0xffde , #  R13
-     0xffdf , #  R14
-     0xffe0 , #  R15
-     0xffe1 , #  Shift_L
-     0xffe2 , #  Shift_R
-     0xffe3 , #  Control_L
-     0xffe4 , #  Control_R
-     0xffe5 , #  Caps_Lock
-     0xffe6 , #  Shift_Lock
-     0xffe7 , #  Meta_L
-     0xffe8 , #  Meta_R
-     0xffe9 , #  Alt_L
-     0xffea , #  Alt_R
-     0xffeb , #  Super_L
-     0xffec , #  Super_R
-     0xffed , #  Hyper_L
-     0xffee , #  Hyper_R
-     0xffffff , #  VoidSymbol
-     0xffff , #  Delete
+     0xfe02, #  ISO_Level2_Latch
+     0xfe03, #  ISO_Level3_Shift
+     0xfe0a, #  ISO_Prev_Group
+     0xfe0b, #  ISO_Prev_Group_Lock
+     0xfd18, #  3270_Record
+     0xfd19, #  3270_ChangeScreen
+     0xfd1a, #  3270_DeleteWord
+     0xfd1b, #  3270_ExSelect
+     0xfd1c, #  3270_CursorSelect
+     0xfd1d, #  3270_PrintScreen
+     0xfd1e, #  3270_Enter
+     0xfe01, #  ISO_Lock
+     0xfe04, #  ISO_Level3_Latch
+     0xfe05, #  ISO_Level3_Lock
+     0xfe06, #  ISO_Group_Latch
+     0xfe07, #  ISO_Group_Lock
+     0xfe08, #  ISO_Next_Group
+     0xfe09, #  ISO_Next_Group_Lock
+     0xfe0c, #  ISO_First_Group
+     0xfe0d, #  ISO_First_Group_Lock
+     0xfe0e, #  ISO_Last_Group
+     0xfe0f, #  ISO_Last_Group_Lock
+     0xfe11, #  ISO_Level5_Shift
+     0xfe12, #  ISO_Level5_Latch
+     0xfe13, #  ISO_Level5_Lock
+     0xfe20, #  ISO_Left_Tab
+     0xfe21, #  ISO_Move_Line_Up
+     0xfe22, #  ISO_Move_Line_Down
+     0xfe23, #  ISO_Partial_Line_Up
+     0xfe24, #  ISO_Partial_Line_Down
+     0xfe25, #  ISO_Partial_Space_Left
+     0xfe26, #  ISO_Partial_Space_Right
+     0xfe27, #  ISO_Set_Margin_Left
+     0xfe28, #  ISO_Set_Margin_Right
+     0xfe29, #  ISO_Release_Margin_Left
+     0xfe2a, #  ISO_Release_Margin_Right
+     0xfe2b, #  ISO_Release_Both_Margins
+     0xfe2c, #  ISO_Fast_Cursor_Left
+     0xfe2d, #  ISO_Fast_Cursor_Right
+     0xfe2e, #  ISO_Fast_Cursor_Up
+     0xfe2f, #  ISO_Fast_Cursor_Down
+     0xfe30, #  ISO_Continuous_Underline
+     0xfe31, #  ISO_Discontinuous_Underline
+     0xfe32, #  ISO_Emphasize
+     0xfe33, #  ISO_Center_Object
+     0xfe34, #  ISO_Enter
+     0xfe70, #  AccessX_Enable
+     0xfe71, #  AccessX_Feedback_Enable
+     0xfe72, #  RepeatKeys_Enable
+     0xfe73, #  SlowKeys_Enable
+     0xfe74, #  BounceKeys_Enable
+     0xfe75, #  StickyKeys_Enable
+     0xfe76, #  MouseKeys_Enable
+     0xfe77, #  MouseKeys_Accel_Enable
+     0xfe78, #  Overlay1_Enable
+     0xfe79, #  Overlay2_Enable
+     0xfe7a, #  AudibleBell_Enable
+     0xfed0, #  First_Virtual_Screen
+     0xfed1, #  Prev_Virtual_Screen
+     0xfed2, #  Next_Virtual_Screen
+     0xfed4, #  Last_Virtual_Screen
+     0xfed5, #  Terminate_Server
+     0xfee0, #  Pointer_Left
+     0xfee1, #  Pointer_Right
+     0xfee2, #  Pointer_Up
+     0xfee3, #  Pointer_Down
+     0xfee4, #  Pointer_UpLeft
+     0xfee5, #  Pointer_UpRight
+     0xfee6, #  Pointer_DownLeft
+     0xfee7, #  Pointer_DownRight
+     0xfee8, #  Pointer_Button_Dflt
+     0xfee9, #  Pointer_Button1
+     0xfeea, #  Pointer_Button2
+     0xfeeb, #  Pointer_Button3
+     0xfeec, #  Pointer_Button4
+     0xfeed, #  Pointer_Button5
+     0xfeee, #  Pointer_DblClick_Dflt
+     0xfeef, #  Pointer_DblClick1
+     0xfef0, #  Pointer_DblClick2
+     0xfef1, #  Pointer_DblClick3
+     0xfef4, #  Pointer_Drag_Dflt
+     0xfef5, #  Pointer_Drag1
+     0xfef6, #  Pointer_Drag2
+     0xfef7, #  Pointer_Drag3
+     0xfef8, #  Pointer_Drag4
+     0xfef9, #  Pointer_EnableKeys
+     0xfefa, #  Pointer_Accelerate
+     0xfefb, #  Pointer_DfltBtnNext
+     0xfefc, #  Pointer_DfltBtnPrev
+     0xfefd, #  Pointer_Drag5
+     0xff08, #  BackSpace
+     0xff09, #  Tab
+     0xff0a, #  Linefeed
+     0xff0b, #  Clear
+     0xff0d, #  Return
+     0xff13, #  Pause
+     0xff14, #  Scroll_Lock
+     0xff15, #  Sys_Req
+     0xff1b, #  Escape
+     0xff20, #  Multi_key
+     0xff21, #  Kanji
+     0xff22, #  Muhenkan
+     0xff23, #  Henkan
+     0xff24, #  Romaji
+     0xff25, #  Hiragana
+     0xff26, #  Katakana
+     0xff27, #  Hiragana_Katakana
+     0xff28, #  Zenkaku
+     0xff29, #  Hankaku
+     0xff2a, #  Zenkaku_Hankaku
+     0xff2b, #  Touroku
+     0xff2c, #  Massyo
+     0xff2d, #  Kana_Lock
+     0xff2e, #  Kana_Shift
+     0xff2f, #  Eisu_Shift
+     0xff30, #  Eisu_toggle
+     0xff31, #  Hangul
+     0xff32, #  Hangul_Start
+     0xff33, #  Hangul_End
+     0xff34, #  Hangul_Hanja
+     0xff35, #  Hangul_Jamo
+     0xff36, #  Hangul_Romaja
+     0xff37, #  Hangul_Codeinput
+     0xff38, #  Hangul_Jeonja
+     0xff39, #  Hangul_Banja
+     0xff3a, #  Hangul_PreHanja
+     0xff3b, #  Hangul_PostHanja
+     0xff3c, #  Hangul_SingleCandidate
+     0xff3d, #  Hangul_MultipleCandidate
+     0xff3e, #  Hangul_PreviousCandidate
+     0xff3f, #  Hangul_Special
+     0xff50, #  Home
+     0xff51, #  Left
+     0xff52, #  Up
+     0xff53, #  Right
+     0xff54, #  Down
+     0xff55, #  Page_Up
+     0xff56, #  Page_Down
+     0xff57, #  End
+     0xff58, #  Begin
+     0xff60, #  Select
+     0xff61, #  Print
+     0xff62, #  Execute
+     0xff63, #  Insert
+     0xff65, #  Undo
+     0xff66, #  Redo
+     0xff67, #  Menu
+     0xff68, #  Find
+     0xff69, #  Cancel
+     0xff6a, #  Help
+     0xff6b, #  Break
+     0xff7e, #  Hangul_switch
+     0xff7f, #  Num_Lock
+     0xff80, #  KP_Space
+     0xff89, #  KP_Tab
+     0xff8d, #  KP_Enter
+     0xff91, #  KP_F1
+     0xff92, #  KP_F2
+     0xff93, #  KP_F3
+     0xff94, #  KP_F4
+     0xff95, #  KP_Home
+     0xff96, #  KP_Left
+     0xff97, #  KP_Up
+     0xff98, #  KP_Right
+     0xff99, #  KP_Down
+     0xff9a, #  KP_Page_Up
+     0xff9b, #  KP_Page_Down
+     0xff9c, #  KP_End
+     0xff9d, #  KP_Begin
+     0xff9e, #  KP_Insert
+     0xff9f, #  KP_Delete
+     0xffaa, #  KP_Multiply
+     0xffab, #  KP_Add
+     0xffac, #  KP_Separator
+     0xffad, #  KP_Subtract
+     0xffae, #  KP_Decimal
+     0xffaf, #  KP_Divide
+     0xffb0, #  KP_0
+     0xffb1, #  KP_1
+     0xffb2, #  KP_2
+     0xffb3, #  KP_3
+     0xffb4, #  KP_4
+     0xffb5, #  KP_5
+     0xffb6, #  KP_6
+     0xffb7, #  KP_7
+     0xffb8, #  KP_8
+     0xffb9, #  KP_9
+     0xffbd, #  KP_Equal
+     0xffbe, #  F1
+     0xffbf, #  F2
+     0xffc0, #  F3
+     0xffc1, #  F4
+     0xffc2, #  F5
+     0xffc3, #  F6
+     0xffc4, #  F7
+     0xffc5, #  F8
+     0xffc6, #  F9
+     0xffc7, #  F10
+     0xffc8, #  L1
+     0xffc9, #  L2
+     0xffca, #  L3
+     0xffcb, #  L4
+     0xffcc, #  L5
+     0xffcd, #  L6
+     0xffce, #  L7
+     0xffcf, #  L8
+     0xffd0, #  L9
+     0xffd1, #  L10
+     0xffd2, #  R1
+     0xffd3, #  R2
+     0xffd4, #  R3
+     0xffd5, #  R4
+     0xffd6, #  R5
+     0xffd7, #  R6
+     0xffd8, #  R7
+     0xffd9, #  R8
+     0xffda, #  R9
+     0xffdb, #  R10
+     0xffdc, #  R11
+     0xffdd, #  R12
+     0xffde, #  R13
+     0xffdf, #  R14
+     0xffe0, #  R15
+     0xffe1, #  Shift_L
+     0xffe2, #  Shift_R
+     0xffe3, #  Control_L
+     0xffe4, #  Control_R
+     0xffe5, #  Caps_Lock
+     0xffe6, #  Shift_Lock
+     0xffe7, #  Meta_L
+     0xffe8, #  Meta_R
+     0xffe9, #  Alt_L
+     0xffea, #  Alt_R
+     0xffeb, #  Super_L
+     0xffec, #  Super_R
+     0xffed, #  Hyper_L
+     0xffee, #  Hyper_R
+     0xffffff, #  VoidSymbol
+     0xffff, #  Delete
 ]
 
 def non_trans_key(keyval):

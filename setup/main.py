@@ -35,11 +35,23 @@ def cancel_cb(widget):
     return False
     
 def help_cb(widget, data):
+    _show_help()
     return False
 
 def print_help(out, v=0):
     print >> out, "-c need <file> artument"
     sys.exit(v)
+
+def _show_help():
+    try:
+        import gnome
+    except:
+        print "You need python gnome module to use this help."
+        return
+
+    p = { gnome.PARAM_APP_DATADIR : '/usr/share' }
+    gnome.program_init("ibus-xkbc", '1.0', properties=p)
+    gnome.help_display("ibus-xkbc")
 
 def main():
 

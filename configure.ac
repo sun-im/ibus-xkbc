@@ -51,9 +51,9 @@ AC_HEADER_STDC
 AM_PROG_LIBTOOL
 
 # check ibus
-PKG_CHECK_MODULES(IBUS, [
-    ibus-1.0 >= 1.1.0
-])
+# PKG_CHECK_MODULES(IBUS, [
+#    ibus-1.0 >= 1.1.0
+# ])
 
 #check python
 AM_PATH_PYTHON([2.6])
@@ -80,6 +80,8 @@ setup/ibus-setup-xkbc
 setup/xkbc/Makefile
 icons/Makefile
 m4/Makefile
+help/Makefile
+help/C/Makefile
 )
 
 AC_OUTPUT
