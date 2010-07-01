@@ -18,36 +18,41 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-from constants import *
-from parser import *
+VKB_OUTER_PATH = 0
+VKB_INNER_PATH = 1
 
-class KeymapParser(Parser):
+VKB_CHAR_KEY = 0
+VKB_FUNC_KEY = 1
+VKB_MODIFIER_KEY = 2
+VKB_CONTROL_KEY = 3
+VKB_LOCK_KEY = 4
+VKB_KEYPAD_KEY = 5
 
-    def __init__(self, basedir):
-        Parser.__init__(self, basedir)
+VKB_SOLID = 0
+VKB_GRADIENT = 1
 
-    def get_component_class(self):
-        return XKB_Keymap
+VKB_ALL_TEXT = 0
+VKB_ACTIVE_TEXT = 1
 
-    def get_component_keyword(self):
-        return KWD_KEYMAP
+VKB_NORMAL_WINDOW = 0
+VKB_KEYS_ONLY_WINDOW = 1
 
-    def get_component_dirname(self):
-        return DN_KEYMAP
+VKB_DECORATION_TITLE = 0
+VKB_DECORATION_FRAME = 1
+VKB_DECORATION_NONE = 2
 
-from xkb_component import XKB_Component
+VKB_DEFAULT_GEOM_NAME = "vkb(simple)"
+VKB_DEFAULT_SYM_NAME = "us(euro)"
 
-class XKB_Keymap(XKB_Component):
-    #### xkb_keymap data body ####
-
-    ##############################
-
-    def __init__(self):
-        XKB_Component.__init__(self)
-
-    def set_content(self, content):
-        length = len(content)
-        i = 0
-        # while i < length:
-        #    token = content[i]; i += 1
-
+KEY_VKB_SECTION = "engine/xkbc/vkb"
+KEY_VKB_X = "x"
+KEY_VKB_Y = "y"
+KEY_VKB_X_SCALE = "x_scale"
+KEY_VKB_Y_SCALE = "y_scale"
+KEY_VKB_LAYOUT = "layout"
+KEY_VKB_GEOMETRY= "geometry"
+KEY_VKB_LABEL_STYLE = "label_style"
+KEY_VKB_SURFACE_STYLE = "surface_style"
+KEY_VKB_WINDOW_STYLE = "window_style"
+KEY_VKB_TRANSPARENCY = "transparency"
+KEY_VKB_WINDOW_KEEP_BELOW = "window_keep_below"

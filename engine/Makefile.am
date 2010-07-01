@@ -1,8 +1,8 @@
 # vim:set noet ts=4:
 #
-# ibus-tmpl - The Input Bus template project
+# ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2007-2008 Huang Peng <shawn.p.huang@gmail.com>
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,10 +20,10 @@
 # 
 engine_xkbc_PYTHON = \
 	engine.py \
- 	factory.py \
+	factory.py \
 	compose_tbl.py \
- 	main.py \
- 	$(NULL)
+	main.py \
+	$(NULL)
 
 engine_xkbcdir = $(datadir)/ibus-xkbc/engine
  
@@ -42,14 +42,14 @@ xkbc.xml: xkbc.xml.in
 CLEANFILES = \
 	xkbc.xml \
 	*.py \
- 	*.pyc \
+	*.pyc \
 	*.pyo \
- 	$(NULL)
+	$(NULL)
  
 EXTRA_DIST = \
- 	ibus-engine-xkbc.in \
- 	xkbc.xml.in \
- 	$(NULL)
+	ibus-engine-xkbc.in \
+	xkbc.xml.in \
+	$(NULL)
  
 # test:
 # 	$(ENV) LANG=en_US PYTHONPATH=$(top_srcdir) $(PYTHON) $(srcdir)/main.py

@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -49,6 +49,7 @@ KWD_KEYCODES = "xkb_keycodes"
 KWD_KEYMAP = "xkb_keymap"
 KWD_GEOMETRY = "xkb_geometry"
 
+# symbols specific
 KWD_MODIFIER_MAP = "modifier_map"
 KWD_TYPE = "type"
 KWD_KEY = ["key", "Key"]
@@ -70,6 +71,55 @@ KWD_ALIAS = "alias"
 KWD_ALTERNATE = "alternate"
 KWD_INDICATOR = "indicator"
 KWD_VIRTUAL = "virtual"
+
+# geometry specific
+KWD_DESCRIPTION = "description"
+KWD_WIDTH = "width"
+KWD_HEIGHT = "height"
+KWD_SHAPE = "shape"
+KWD_SHAPE_CORNERRADIUS = "shape.cornerRadius"
+KWD_OUTLINE = "outline"
+KWD_SOLID = "solid"
+KWD_SECTION = "section"
+KWD_SECTION_LEFT = "section.left"
+KWD_SECTION_TOP = "section.top"
+KWD_ROW_LEFT = "row.left"
+KWD_ROW_TOP = "row.top"
+KWD_KEY_SHAPE = "key.shape"
+KWD_KEY_GAP = "key.gap"
+KWD_TOP = "top"
+KWD_LEFT = "left"
+KWD_PRIORITY = "priority"
+KWD_ROW = "row"
+KWD_ROW_VERTICAL = "row.vertical"
+KWD_KEYS = "keys"
+KWD_INDICATOR_ONCOLOR = "indicator.onColor"
+KWD_INDICATOR_OFFCOLOR = "indicator.offColor"
+KWD_INDICATOR_TOP = "indicator.top"
+KWD_INDICATOR_SHAPE = "indicator.shape"
+KWD_INDICATOR = "indicator"
+KWD_INDICATOR_PRIORITY = "indicator.priority"
+KWD_INDICATOR_LEFT = "indicator.left"
+KWD_TEXT_TOP = "text.top"
+KWD_TEXT_COLOR = "text.color"
+KWD_TEXT = "text"
+KWD_TEXT_FONT = "text.font"
+KWD_TEXT_FONTSIZE = "text.fontSize"
+KWD_TEXT_FONTWIDTH = "text.fontWidth"
+KWD_TEXT_WEIGHT = "text.weight"
+KWD_TEXT_SLANT = "text.slant"
+KWD_LOGO = "logo"
+KWD_CORNERRADIUS = "cornerRadius"
+KWD_CORNER = "corner"
+KWD_APPROX = "approx"
+KWD_PRIMARY = "primary"
+
+KWD_BASE_COLOR = "baseColor"
+KWD_LABEL_COLOR = "labelColor"
+KWD_KEY_COLOR = "key.color"
+KWD_COLOR = "color"
+KWD_OVERLAY = "overlay"
+KWD_ANGLE = "angle"
 
 # componet type
 TYPE_SYMBOLS     = 1 << 0
@@ -103,3 +153,4 @@ ST_CAPS = 1 << 1
 ST_CONTROL = 1 << 2
 ST_LEVEL_3 = ST_GROUP_2 = ST_ALT_R = 1 << 7 	# altgraph / modeswitch / shift-level3
 ST_ALT_L = 0x4000048
+ST_NUM_LOCK = 1 << 10

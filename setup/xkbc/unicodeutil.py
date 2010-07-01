@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -1379,7 +1379,7 @@ def unicode_upper(letter):
                 upper_case = 0x3a3
             elif letter == 0x3ac:
                 upper_case = 0x386
-            elif lstter == 0x3ad:
+            elif letter == 0x3ad:
                 upper_case = 0x388
             elif letter == 0x3ae:
                 upper_case = 0x389
@@ -1457,7 +1457,7 @@ def unicode_lower(letter):
                 lower_case = 0x3c2
             elif letter == 0x386:
                 lower_case = 0x3ac
-            elif lstter == 0x388:
+            elif letter == 0x388:
                 lower_case = 0x3ad
             elif letter == 0x389:
                 lower_case = 0x3ae
@@ -1586,6 +1586,49 @@ key_name_alias_tbl_r = {
     "<AB06>" : "<LatN>",
     "<AB07>" : "<LatM>"
 }
+
+keypad_keysym_to_label = {
+    "KP_Space" : "",
+    "KP_Tab" : "Tab",
+    "KP_Enter" : "Enter",
+    "KP_F1" : "F1",
+    "KP_F2" : "F2",
+    "KP_F3" : "F3",
+    "KP_F4" : "F4",
+    "KP_Home" : "Home",
+    "KP_Left" : "Left",
+    "KP_Up" : "Up",
+    "KP_Right" : "Right",
+    "KP_Down" : "Down",
+    "KP_Page_Up" : "Pg Up",
+    "KP_Page_Down" : "Pg Dn",
+    "KP_End" : "End",
+    "KP_Begin" : "Begin",
+    "KP_Insert" : "Ins",
+    "KP_Delete" : "Del",
+    "KP_Multiply" : "*",
+    "KP_Add" : "+",
+    "KP_Separator" : "Sep",
+    "KP_Subtract" : "-",
+    "KP_Decimal" : ".",
+    "KP_Divide" : "/",
+    "KP_0" : "0",
+    "KP_1" : "1",
+    "KP_2" : "2",
+    "KP_3" : "3",
+    "KP_4" : "4",
+    "KP_5" : "5",
+    "KP_6" : "6",
+    "KP_7" : "7",
+    "KP_8" : "8",
+    "KP_9" : "9",
+    "KP_Equal" : "=",
+    }
+
+def get_key_pad_label(key_sym):
+    if keypad_keysym_to_label.has_key(key_sym):
+        return keypad_keysym_to_label[key_sym]
+    return None
 
 def key_name_alias(key_name):
     if key_name in key_name_alias_tbl.keys():

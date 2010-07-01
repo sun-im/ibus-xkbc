@@ -1,4 +1,5 @@
-# vim:set et sts=4 sw=4:
+#!/bin/bash
+# vim:set noet ts=4:
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
@@ -17,37 +18,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-
-from constants import *
-from parser import *
-
-class KeymapParser(Parser):
-
-    def __init__(self, basedir):
-        Parser.__init__(self, basedir)
-
-    def get_component_class(self):
-        return XKB_Keymap
-
-    def get_component_keyword(self):
-        return KWD_KEYMAP
-
-    def get_component_dirname(self):
-        return DN_KEYMAP
-
-from xkb_component import XKB_Component
-
-class XKB_Keymap(XKB_Component):
-    #### xkb_keymap data body ####
-
-    ##############################
-
-    def __init__(self):
-        XKB_Component.__init__(self)
-
-    def set_content(self, content):
-        length = len(content)
-        i = 0
-        # while i < length:
-        #    token = content[i]; i += 1
-
+export LIBEXECDIR=@prefix@/lib/ibus
+export XKB_DATA_DIR=@prefix@/share/X11/xkb
+export XKBC_SETUPDIR=@prefix@/share/ibus-xkbc/setup
+export XKBC_LIBDIR=@prefix@/share/ibus-xkbc/setup/xkbc
+export XKBC_DATAFILE=@prefix@/share/ibus-xkbc/data/xkbc.dat
+exec python @prefix@/share/ibus-xkbc/vkb/vkb.py $@

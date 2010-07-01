@@ -5,16 +5,16 @@
 	<description>XKBC Component</description>
 	<exec>${libexecdir}/ibus-engine-xkbc --ibus</exec>
 	<version>@VERSION@</version>
-	<author>Naoyuki Ishimura &lt;naoyuki.ishimura@sun.com&gt;</author>
+	<author>Naoyuki Ishimura &lt;naoyuki.ishimura@oracle.com&gt;</author>
 	<license>GPL</license>
-	<homepage>http://code.google.com/p/ibus</homepage>
+	<homepage>http://github.com/sun-im/ibus-xkbc</homepage>
 	<textdomain>ibus-xkbc</textdomain>
 
 	<engines>
 		<engine>
 			<name>xkbc</name>
 			<license>GPL</license>
-			<author>Naoyuki Ishimura &lt;naoyuki.ishimura@sun.com&gt;</author>
+			<author>Naoyuki Ishimura &lt;naoyuki.ishimura@oracle.com&gt;</author>
 			<icon>${pkgdatadir}/icons/ibus-xkbc.png</icon>
 			<layout>us</layout>
 			<longname>XKBC (Keyboard Emulation)</longname>

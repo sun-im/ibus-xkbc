@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus XKBC project
 #
-# Copyright (c) 2007-2008 Huang Peng <shawn.p.huang@gmail.com>
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -78,6 +78,8 @@ engine/xkbc.engine
 setup/Makefile
 setup/ibus-setup-xkbc
 setup/xkbc/Makefile
+vkb/Makefile
+vkb/ibus-kbd-xkbc
 icons/Makefile
 m4/Makefile
 help/Makefile

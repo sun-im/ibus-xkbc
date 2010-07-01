@@ -18,36 +18,30 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-from constants import *
-from parser import *
+import cairo
 
-class KeymapParser(Parser):
+from vkb_constants import *
 
-    def __init__(self, basedir):
-        Parser.__init__(self, basedir)
+def _lighter(c):
+    return min(c * 1.4, 1.0)
 
-    def get_component_class(self):
-        return XKB_Keymap
+def _darker(c):
+    return c * 0.7
 
-    def get_component_keyword(self):
-        return KWD_KEYMAP
+def vkb_make_pattern(cr, x, y, w, h, type):
 
-    def get_component_dirname(self):
-        return DN_KEYMAP
+    if type == VKB_GRADIENT:
+        pattern = cairo.LinearGradient(x, y, x + w, y + h)
+        pattern.add_color_stop_rgb(0, _lighter(cr[0]), _lighter(cr[1]), _lighter(cr[2]))
+        pattern.add_color_stop_rgb(1, _darker(cr[0]), _darker(cr[1]), _darker(cr[2]))
+    elif type == VKB_SOLID:
+        pattern = cairo.SolidPattern(cr[0], cr[1], cr[2])
+    else:
+        print "Unknown fill pattern."
+        pattern = cairo.SolidPattern(cr[0], cr[1], cr[2])
+        
+    return pattern
 
-from xkb_component import XKB_Component
-
-class XKB_Keymap(XKB_Component):
-    #### xkb_keymap data body ####
-
-    ##############################
-
-    def __init__(self):
-        XKB_Component.__init__(self)
-
-    def set_content(self, content):
-        length = len(content)
-        i = 0
-        # while i < length:
-        #    token = content[i]; i += 1
-
+    
+    
+    

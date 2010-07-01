@@ -1,8 +1,8 @@
 # vim:set noet ts=4:
 #
-# ibus-pinyin - The PinYin engine for IBus
+# ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2007-2008 Huang Peng <shawn.p.huang@gmail.com>
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

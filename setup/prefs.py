@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -31,21 +31,21 @@ from xkbc import *
 import cPickle as pickle
 PICKLE_FILE = os.getenv('XKBC_DATAFILE')
 all_layouts = None
-all_symbols = None
+xkbc_db = None
 
-def prefs_get_symbols_data():
-    global all_layouts, all_symbols
-    if all_symbols == None:
+def prefs_get_xkbc_db():
+    global all_layouts, xkbc_db
+    if xkbc_db == None:
         f = open(PICKLE_FILE)
-        all_layouts, all_symbols = pickle.load(f)
+        all_layouts, xkbc_db = pickle.load(f)
         f.close()
-    return all_symbols
+    return xkbc_db
 
 def prefs_get_layouts():
-    global all_layouts, all_symbols
+    global all_layouts, xkbc_db
     if all_layouts == None:
         f = open(PICKLE_FILE)
-        all_layouts, all_symbols = pickle.load(f)
+        all_layouts, xkbc_db = pickle.load(f)
         f.close()
     return all_layouts
     
@@ -159,7 +159,7 @@ class Prefs(object):
 
         return DEFAULT_LAYOUTS[0]
 
-class _ConfigDummy:
+class _ConfigDummy(object):
     def __init__(self):
         self.__dict = {}
 
@@ -220,6 +220,10 @@ def _get_layout_objects(name_list):
 # returns Layout object list
 def prefs_get_user_layouts():
     user_list = _prefs.get_user_layouts()
+    return _get_layout_objects(user_list)
+
+def prefs_get_user_layouts_from_config():
+    user_list = _prefs.get_user_layouts_from_config()
     return _get_layout_objects(user_list)
 
 def prefs_get_physical_layout():

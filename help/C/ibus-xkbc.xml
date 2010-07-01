@@ -3,9 +3,9 @@
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
   <!ENTITY appname "iBus XKBC">
-  <!ENTITY author1 "Sun">
+  <!ENTITY author1 "Oracle">
   <!ENTITY author2 "Input Method dev">
-  <!ENTITY publisher "Sun Microsystems, Inc.">
+  <!ENTITY publisher "Oracle">
   <!ENTITY appversion "1.0">
   <!ENTITY manrevision "1.0">
   <!ENTITY date "January 2010">

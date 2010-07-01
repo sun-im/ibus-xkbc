@@ -1,0 +1,69 @@
+// Virtual Keyboard default simple geometry (subset of pc101)
+//
+
+default xkb_geometry "simple" {
+
+	description= "IBus Virtual Keyboard default";
+	width= 315;
+	height=120;
+
+    shape "NORM" { { [ 18,18] }, { [2,1], [ 16,16] } };
+    shape "BKSP" { { [ 38,18] }, { [2,1], [ 36,16] } };
+    shape "TABK" { { [ 28,18] }, { [2,1], [ 26,16] } };
+    shape "BKSL" { { [ 28,18] }, { [2,1], [ 26,16] } };
+    shape "RTRN" { { [ 42,18] }, { [2,1], [ 40,16] } };
+    shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
+    shape "LFSH" { { [ 42,18] }, { [2,1], [ 40,16] } };
+    shape "RTSH" { { [ 52,18] }, { [2,1], [ 50,16] } };
+    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
+    shape "SPCE" { { [133,18] }, { [2,1], [131,16] } };
+
+	section.left= 15;
+
+    section "Alpha" {
+	top= 15;
+	row {
+	    top= 1;
+	    keys { <TLDE>, <AE01>, <AE02>, <AE03>, <AE04>,
+		   <AE05>, <AE06>, <AE07>, <AE08>, <AE09>,
+		   <AE10>, <AE11>, <AE12>,
+		   { <BKSP>, "BKSP", color="grey20" }
+	    };
+	};
+	row {
+	    top= 20;
+	    keys { { <TAB>, "TABK", color="grey20" },
+		   <AD01>, <AD02>, <AD03>, <AD04>, <AD05>, 
+		   <AD06>, <AD07>, <AD08>, <AD09>, <AD10>, 
+		   <AD11>, <AD12>, { <BKSL>, "BKSL" }
+	    };
+	};
+	row {
+	    top= 39;
+	    keys { { <CAPS>, "CAPS", color="grey20" },
+		   <AC01>, <AC02>, <AC03>, <AC04>, <AC05>, 
+		   <AC06>, <AC07>, <AC08>, <AC09>, <AC10>, 
+		   <AC11>, { <RTRN>, "RTRN", color="grey20" }
+	    };
+	};
+	row {
+	    top= 58;
+	    keys { { <LFSH>, "LFSH", color="grey20" },
+		    <AB01>, <AB02>, <AB03>, <AB04>, <AB05>, 
+		    <AB06>, <AB07>, <AB08>, <AB09>, <AB10>, 
+		    { <RTSH>, "RTSH", color="grey20" }
+	    };
+	};
+	row {
+	    top= 77;
+	    key.shape= "MODK";
+	    key.color= "grey20";
+	    keys { <LCTL>, { <LALT>, 21 },
+		   { <SPCE>, "SPCE", color="white" },
+		   <RALT>, { <RCTL>, 21 }
+	    };
+	};
+
+    }; // End of "Alpha" section
+
+};

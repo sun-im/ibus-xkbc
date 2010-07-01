@@ -2,10 +2,10 @@
 <omf>
   <resource>
     <creator>
-      Sun Documentation Team
+      Oracle Documentation Team
     </creator>
     <maintainer>
-      Sun Documentation Team
+      Oracle Documentation Team
     </maintainer>
     <title>
       Keyboard Layout Emulation Input Method (XKBC)
@@ -25,6 +25,6 @@
     <identifier url="ibus-xkbc.xml"/>
     <language code="C"/>
     <relation seriesid="00dc1156-d4c6-11d8-9917-c62edd84afcc"/>
-    <rights type="GNU FDL" license.version="1.1" holder="Sun Microsystems"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Oracle and/or its affiliates"/>
   </resource>        
 </omf>

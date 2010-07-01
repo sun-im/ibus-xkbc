@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -39,7 +39,8 @@ def help_cb(widget, data):
     return False
 
 def print_help(out, v=0):
-    print >> out, "-c need <file> artument"
+    print >> out, "-k        # virtual keyboard symbol list config"
+    print >> out, "-c <file> # re-create xkbc.dat data file"
     sys.exit(v)
 
 def _show_help():
@@ -58,23 +59,27 @@ def main():
     # -------------------------------------------------------------
     # Re-create ibus-xkbc/data/xkbc.dat
     # this option is for just maintenance purpose
-    shortopt = "c:"
+    shortopt = "c:k"
     try:
         opts, args = getopt.getopt(sys.argv[1:], shortopt)
     except:
         print_help(sys.stderr, 1)
 
+    vkb_mode = False
     for o, a in opts:
         if o == "-c":
             import prefs
             prefs.recreate_db(a)
             sys.exit(0)
+        elif o == "-k":
+            vkb_mode = True
         else:
             print_help(sys.stderr, 1)
     # -------------------------------------------------------------
 
     window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-    window.set_title(UI_TITLE)
+    title = UI_TITLE if vkb_mode == False else UI_TITLE_VKB
+    window.set_title(title)
     window.set_size_request(400, 500)
     window.connect("delete_event", lambda w, e: gtk.main_quit())
 
@@ -99,8 +104,6 @@ def main():
     scrolled_window.add_with_viewport(view)
     scrolled_window.set_size_request(400, 400)
 
-    notebook.append_page(scrolled_window, gtk.Label(UI_SOURCE_LAYOUT_TAB))
-
     # Hot key
     hotkey_box = gtk.VBox(False, 0)
     cycle_hotkey_list = hotkey.CycleHotkeyList(window)
@@ -109,7 +112,9 @@ def main():
     rcycle_hotkey_list = hotkey.RCycleHotkeyList(window)
     hotkey_box.pack_start(rcycle_hotkey_list.get_window(), True, False, 0)
 
-    notebook.append_page(hotkey_box, gtk.Label(UI_HOTKEY_TAB))
+    if vkb_mode == False:
+        notebook.append_page(scrolled_window, gtk.Label(UI_SOURCE_LAYOUT_TAB))
+        notebook.append_page(hotkey_box, gtk.Label(UI_HOTKEY_TAB))
 
     button_box = gtk.HBox(False, 10)
     ok_button = gtk.Button(UI_OK)

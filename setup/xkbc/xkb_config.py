@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -33,10 +33,14 @@ from xkb_geometry import *
 from unicodeutil import *
 
 DEFAULT_XKB_DATA_DIR = os.getenv('XKB_DATA_DIR')
+VKB_GEOM_DIR = os.getenv('VKB_GEOM_DIR')
 
 # XKB Config database
 class XKBCDB:
 
+    # XKBCDB contains all of necessary information for layout emulation
+    # and virtual keyboard.
+    #
     def __init__(self, dir = DEFAULT_XKB_DATA_DIR, type = TYPE_ALL):
         self.symbols_dict = None
         self.keycodes_dict = None
@@ -54,9 +58,13 @@ class XKBCDB:
             self.types_dict = TypesParser(dir).get_components()
         if type & TYPE_GEOMETRY:
             self.geometry_dict = GeometryParser(dir).get_components()
+            tmp_dic = GeometryParser(VKB_GEOM_DIR).get_components()
+            self.geometry_dict.update(tmp_dic)
+            
         if type & TYPE_KEYMAP:
             self.keymap_dict = KeymapParser(dir).get_components()
 
+    # Selects only default marked symbol component
     def select_default_symbols(self, sym_dict):
         dd = {}
         for v in sym_dict.values():
@@ -69,6 +77,7 @@ class XKBCDB:
                 dd[name] = v
         return dd
 
+    # Selects subdirectory names in xkb/symbols directory
     def select_subdirs(self, keys):
         ret_array = []
         for k in keys:
@@ -95,6 +104,7 @@ class XKBCDB:
             key_name = akey_name
         return key_name
 
+    # returns symbol dict
     def _get_sym_dict(self, symbol_name):
         search_default = False
         sub_id = symbol_name.find(NAME_START)
@@ -129,6 +139,7 @@ class XKBCDB:
 
         return sym_dict
 
+    # returns key name (like <AE01>) if sym_dict has 'keysym'
     def _get_key_name(self, sym_dict, keysym, state):
         for dict_label, list_label in self.search_order_list:
             candidate_dict = sym_dict.get_dict(dict_label)
@@ -158,10 +169,16 @@ class XKBCDB:
 
     def get_trans_ustr(self, symbol_name, key_name, state):
         keysym = self.get_keysym(symbol_name, key_name, state)
+
         if keysym == None:
             return None
+        elif keysym.startswith("0x100"):
+            # This seems to mean just UCS-2 representation with 0x100 appened.
+            code = check_unicode_representation(keysym[4:])
+            if code == None:
+                return None
         elif keysym.startswith("0x"):
-            # This means keysym is likely to represent UCS-4 code string.
+            # This may represents keysym as UCS-4 code string.
             code = int(keysym[2:], 16)
             if code > 0xffff:
                 return ucs4_to_utf8(code)
@@ -187,7 +204,23 @@ class XKBCDB:
         akey_name = key_name_alias_r(key_name)
         if akey_name != None and cand_dict.has_key(akey_name):
             return cand_dict[akey_name]
+
         return None
+
+    def get_unichar_array(self, symbol_name, key_name):
+
+        char_array = []
+        char_array.append(self.get_trans_ustr(symbol_name, key_name, 0))
+        char_array.append(self.get_trans_ustr(symbol_name, key_name, ST_SHIFT))
+        char_array.append(self.get_trans_ustr(symbol_name, key_name, ST_LEVEL_3))
+        char_array.append(self.get_trans_ustr(symbol_name, key_name, ST_SHIFT | ST_LEVEL_3))
+        caps_array = []
+        caps_array.append(self.get_trans_ustr(symbol_name, key_name, ST_CAPS))
+        caps_array.append(self.get_trans_ustr(symbol_name, key_name, ST_CAPS | ST_SHIFT))
+        caps_array.append(self.get_trans_ustr(symbol_name, key_name, ST_CAPS | ST_LEVEL_3))
+        caps_array.append(self.get_trans_ustr(symbol_name, key_name, ST_CAPS | ST_SHIFT | ST_LEVEL_3))
+
+        return (char_array, caps_array)
 
     def get_keysym(self, symbol_name, key_name, state):
 
@@ -242,15 +275,25 @@ class XKBCDB:
         # if g is None, then fallback to e
         # if h is None, then fallback to f
         
-        if group > len(sym_array):
+        if group >= len(sym_array):
             group = 0
-        grp_array = sym_array[group]
-        if level > len(grp_array):
-            if level < 2:
-                level = 0
-            level -= 2
 
-        symbol = grp_array[level]
+        grp_array = sym_array[group]
+
+        gl = len(grp_array)
+        if level >= len(grp_array):
+            if level == 0:
+                return None
+
+            if level == 3 and gl > 1:
+                level = 1
+            else:
+                level = 0
+
+        try:
+            symbol = grp_array[level]
+        except:
+            return None
 
         return symbol
     
@@ -270,7 +313,7 @@ class XKBCDB:
         return self.keymap_dict
 
 def xkbc_get_db():
-    xkbc = XKBCDB(type = TYPE_SYMBOLS)
+    xkbc = XKBCDB(type = TYPE_SYMBOLS | TYPE_GEOMETRY)
     return xkbc
 
 if __name__ == "__main__":

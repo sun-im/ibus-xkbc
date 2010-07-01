@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The XKeyboard Config based engine for IBus
 #
-# Copyright (c) 2009 Naoyuki Ishimura <naoyuki.ishimura@sun.com>
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@ SUBDIRS = \
 	engine \
 	setup \
 	setup/xkbc \
+	vkb \
 	icons \
 	m4 \
 	po \

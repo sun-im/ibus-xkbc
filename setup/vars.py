@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 UI_TITLE = "XKBC Configuration"
+UI_TITLE_VKB = "Virtual Keyboard layout Configuration"
 UI_LAYOUT_TAB = "Target Layout"
 UI_SOURCE_LAYOUT_TAB = "Physical Layout"
 UI_HOTKEY_TAB = "Hot Keys"

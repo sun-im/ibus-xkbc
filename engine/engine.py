@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -53,7 +53,7 @@ class Engine(ibus.EngineBase):
         self.__compose_state = COMPOSE_END
         self.__compose_dict = None
 
-        self.__xkbc = prefs_get_symbols_data()
+        self.__xkbc = prefs_get_xkbc_db()
         self.__prop_list = self._init_props()
 
         self.__target_layout_name = prefs_get_last_layout()

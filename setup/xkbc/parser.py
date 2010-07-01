@@ -2,7 +2,7 @@
 #
 # ibus-xkbc - The Input Bus Keyboard Layout emulaton engine.
 #
-# Copyright (c) 2009-2010 Sun Microsystems, Inc All Rights Reserved.
+# Copyright (c) 2009, 2010 Oracle and/or its affiliates. All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -120,9 +120,11 @@ class Parser(object):
                         in_string = False
                         self._append(buf, start, end, line)
                         start = end = idx
-                elif c in self.escape:
-                    in_escape = True
                 else:
+                    if c in self.escape:
+                        in_escape = True
+                    elif in_escape:
+                        in_escape = False
                     end = idx
             elif c in self.string_delimiter:
                     in_string = True

@@ -3,10 +3,10 @@ Name:       @PACKAGE_NAME@
 Version:    @PACKAGE_VERSION@
 Release:    1%{?dist}
 Summary:    The XKBC engine for IBus input platform
-License:    GPL
+License:    GPLv2
 Group:      System Environment/Libraries
-URL:        http://code.google.com/p/ibus/
-Source0:    http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
+URL:        http://github.com/sun-im/ibus-xkbc/
+Source0:    http://cloud.github.com/download/sun-im/ibus-xkbc/%{name}-%{version}.tar.gz
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -15,15 +15,17 @@ BuildRequires:  libtool
 BuildRequires:  python-devel
 BuildRequires:  pkgconfig
 
-Requires:   ibus >= 1.2.0.20090904
+Requires:   ibus >= %{require_ibus_version}
 
 %description
-The XKBC engine for IBus platform. It provides keyboard layout emulation input method.
+The XKBC engine for IBus platform. 
+It provides keyboard layout emulation input method.
 
 %prep
 %setup -q
 
 %build
+sh autogen.sh
 %configure --disable-static
 # make -C po update-gmo
 make %{?_smp_mflags}
@@ -46,5 +48,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/ibus/component/*
 
 %changelog
+* Wed Feb 04 2010 Peng Wu <pwu@redhat.com> - 1.2.0.20100115-3
+- Correct home page url.
+
+* Wed Feb 04 2010 Peng Wu <pwu@redhat.com> - 1.2.0.20100115-2
+- Fixes koji build for F-13.
+
 * Fri Oct 30 2009 Naoyuki Ishimura <naoyuki.ishimura@sun.com> - 0.1.0-1
 - The first version.
