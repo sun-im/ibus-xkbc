@@ -79,7 +79,7 @@ setup/Makefile
 setup/ibus-setup-xkbc
 setup/xkbc/Makefile
 vkb/Makefile
-vkb/ibus-kbd-xkbc
+vkb/ibus-keyboard
 icons/Makefile
 m4/Makefile
 help/Makefile

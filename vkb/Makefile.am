@@ -32,7 +32,7 @@ vkb_xkbc_PYTHON = \
 
 vkb_xkbcdir = $(datadir)/ibus-xkbc/vkb
 
-libexec_SCRIPTS = ibus-kbd-xkbc
+bin_SCRIPTS = ibus-keyboard
 
 CLEANFILES = \
 	*.py \
@@ -41,7 +41,7 @@ CLEANFILES = \
 	$(NULL)
  
 EXTRA_DIST = \
-	ibus-kbd-xkbc.in \
+	ibus-keyboard.in \
 	$(NULL)
  
 # test:
