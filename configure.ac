@@ -59,6 +59,8 @@ AM_PROG_LIBTOOL
 AM_PATH_PYTHON([2.6])
 
 # define GETTEXT_* variables
+PACKAGE=ibus-xkbc
+PACKAGE_NAME=$PACKAGE
 GETTEXT_PACKAGE="$PACKAGE_NAME"
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Define to the read-only architecture-independent data directory.])

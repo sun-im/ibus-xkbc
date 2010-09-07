@@ -323,35 +323,35 @@ class VKBCanvas(gtk.DrawingArea):
         """
         menu = gtk.Menu()
 
-        self._setup_menu(menu, "Layout", self._get_layout_menu())
+        self._setup_menu(menu, _("Layout"), self._get_layout_menu())
 
-        self._setup_menu(menu, "Geometry", self._get_geometry_menu())
+        self._setup_menu(menu, _("Geometry"), self._get_geometry_menu())
         
         self._add_separator(menu)
 
         # label style ("Active label only" - On/Off)
-        item = gtk.CheckMenuItem("Active label only")
+        item = gtk.CheckMenuItem(_("Active label only"))
         item.set_active(self._label_style == VKB_ACTIVE_TEXT)
         item.connect("toggled", self._set_label_style)
         item.show()
         menu.add(item)
 
         # suface style ("Gradation surface" - On/Off)
-        item = gtk.CheckMenuItem("Gradation surface")
+        item = gtk.CheckMenuItem(_("Gradation surface"))
         item.set_active(self._surface_style == VKB_GRADIENT)
         item.connect("toggled", self._set_surface_style)
         item.show()
         menu.add(item)
 
         # window shape style ("Keys only" - On/Off)
-        item = gtk.CheckMenuItem("Keys only window")
+        item = gtk.CheckMenuItem(_("Keys only window"))
         item.set_active(self._window_style == VKB_KEYS_ONLY_WINDOW)
         item.connect("toggled", self._set_window_style)
         item.show()
         menu.add(item)
 
         # window keep below other windows
-        item = gtk.CheckMenuItem("Always below other windows")
+        item = gtk.CheckMenuItem(_("Always below other windows"))
         item.set_active(self._window_keep_below == True)
         item.connect("toggled", self._set_window_keep_below)
         item.show()
@@ -360,7 +360,7 @@ class VKBCanvas(gtk.DrawingArea):
         self._add_separator(menu)
 
         # layout list setup ("Layout list config...")
-        item = gtk.MenuItem("Layout list config...")
+        item = gtk.MenuItem(_("Layout list config..."))
         item.connect("activate", self._layout_list_setup)
         item.show()
         menu.add(item)
@@ -369,11 +369,11 @@ class VKBCanvas(gtk.DrawingArea):
 
         # Transparency menu is available only if running X11 window manager supports it.
         if self.parent.is_composited():
-            self._setup_menu(menu, "Transparency", self._get_transparency_menu())
+            self._setup_menu(menu, _("Transparency"), self._get_transparency_menu())
             self._add_separator(menu)
 
         # exit menu item
-        item = gtk.MenuItem("Exit")
+        item = gtk.MenuItem(_("Exit"))
         item.connect("activate", self._exit)
         item.show()
         menu.add(item)

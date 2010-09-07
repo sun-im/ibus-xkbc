@@ -18,27 +18,31 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
-UI_TITLE = "XKBC Configuration"
-UI_TITLE_VKB = "Virtual Keyboard layout Configuration"
-UI_LAYOUT_TAB = "Target Layout"
-UI_SOURCE_LAYOUT_TAB = "Physical Layout"
-UI_HOTKEY_TAB = "Hot Keys"
+import gettext
 
-UI_OK = "_OK"
-UI_CANCEL = "_Cancel"
-UI_HELP = "_Help"
+_ = lambda a : gettext.dgettext("ibus-xkbc", a)
 
-UI_KEYS = "Hot key"
-UI_ADD = "Add..."
-UI_DEL = "Delete"
-UI_ADD2 = "_Add"
-UI_TYPEMSG = "Please type here."
-UI_ADD_DIALOG_TITLE = "Hotkey add dialog"
+UI_TITLE = _("XKBC Configuration")
+UI_TITLE_VKB = _("Virtual Keyboard layout Configuration")
+UI_LAYOUT_TAB = _("Target Layout")
+UI_SOURCE_LAYOUT_TAB = _("Physical Layout")
+UI_HOTKEY_TAB = _("Hot Keys")
 
-UI_LAYOUT_COLUMN = "Layout"
-UI_SELECT_COLUMN = "Select"
-UI_CYCLE_KEY = "Switch layout hot keys"
-UI_RCYCLE_KEY = "Switch layout reverse order hot keys"
+UI_OK = _("_OK")
+UI_CANCEL = _("_Cancel")
+UI_HELP = _("_Help")
+
+UI_KEYS = _("Hot key")
+UI_ADD = _("Add...")
+UI_DEL = _("Delete")
+UI_ADD2 = _("_Add")
+UI_TYPEMSG = _("Please type here.")
+UI_ADD_DIALOG_TITLE = _("Hotkey add dialog")
+
+UI_LAYOUT_COLUMN = _("Layout")
+UI_SELECT_COLUMN = _("Select")
+UI_CYCLE_KEY = _("Switch layout hot keys")
+UI_RCYCLE_KEY = _("Switch layout reverse order hot keys")
 
 DEFAULT_LAYOUTS = ["ru", "ara", "gr", "fr", "vn", "th", "us/euro"]
 DEFAULT_PHYSICAL_LAYOUT = "us"
@@ -56,5 +60,5 @@ KEY_LAST_LAYOUT = "last_layout"
 CMD_LAYOUT_SWITCH = "LayoutSwitch"
 CMD_SETUP = "Setup"
 
-UI_TOOLTIP_SETUP = "Configure Layout Switch"
+UI_TOOLTIP_SETUP = _("Configure Layout Switch")
 

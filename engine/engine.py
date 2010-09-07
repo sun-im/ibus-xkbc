@@ -18,6 +18,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
+import gettext
 import os
 from os import path
 
@@ -34,6 +35,8 @@ from ibus import keysyms
 from ibus import modifier
 
 from compose_tbl import *
+
+_ = lambda a : gettext.dgettext("ibus-xkbc", a)
 
 COMPOSE_END = 0
 COMPOSE_START = 1
