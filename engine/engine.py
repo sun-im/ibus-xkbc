@@ -51,6 +51,9 @@ class Engine(ibus.EngineBase):
     def __init__(self, bus, object_path):
         super(Engine, self).__init__(bus, object_path)
 
+        gettext.bindtextdomain("ibus-xkbc", os.getenv('XKBC_LOCALE_DIR'))
+        gettext.bind_textdomain_codeset("ibus-xkbc", "UTF-8")
+
         self.__prop_dict = {}
         self.__config = Config(bus)
         self.__compose_state = COMPOSE_END

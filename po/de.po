@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+       "Project-Id-Version: PACKAGE VERSION\n"
+       "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
+       "POT-Creation-Date: 2010-09-06 13:53+0900\n"
+       "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+       "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+       "Language-Team: LANGUAGE <LL@li.org>\n"
+       "MIME-Version: 1.0\n"
+       "Content-Type: text/plain; charset=UTF-8\n"
+       "Content-Transfer-Encoding: 8bit\n"
+
+#: ../setup/vars.py:25
+msgid "XKBC Configuration"
+msgstr "XKBC-Konfiguration"
+
+#: ../setup/vars.py:26
+msgid "Virtual Keyboard layout Configuration"
+msgstr "Konfiguration des virtuellen Tastaturlayouts"
+
+#: ../setup/vars.py:27
+msgid "Target Layout"
+msgstr "Ziellayout"
+
+#: ../setup/vars.py:28
+msgid "Physical Layout"
+msgstr "Physisches Layout"
+
+#: ../setup/vars.py:29
+msgid "Hot Keys"
+msgstr "Hotkeys"
+
+#: ../setup/vars.py:31
+msgid "_OK"
+msgstr "_OK"
+
+#: ../setup/vars.py:32
+msgid "_Cancel"
+msgstr "_Abbrechen"
+
+#: ../setup/vars.py:33
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../setup/vars.py:35
+msgid "Hot key"
+msgstr "Hotkey"
+
+#: ../setup/vars.py:36
+msgid "Add..."
+msgstr "Hinzufügen..."
+
+#: ../setup/vars.py:37
+msgid "Delete"
+msgstr "Entfernen"
+
+#: ../setup/vars.py:38
+msgid "_Add"
+msgstr "_Hinzufügen"
+
+#: ../setup/vars.py:39
+msgid "Please type here."
+msgstr "Drücken Sie hier die Tasten."
+
+#: ../setup/vars.py:40
+msgid "Hotkey add dialog"
+msgstr "Dialogfeld zum Hinzufügen von Hotkeys"
+
+#: ../setup/vars.py:42 ../vkb/vkb_canvas.py:326
+msgid "Layout"
+msgstr "Layout"
+
+#: ../setup/vars.py:43
+msgid "Select"
+msgstr "Auswählen"
+
+#: ../setup/vars.py:44
+msgid "Switch layout hot keys"
+msgstr "Hotkeys für Layoutumschaltung"
+
+#: ../setup/vars.py:45
+msgid "Switch layout reverse order hot keys"
+msgstr "Hotkeys für umgekehrte Reihenfolge der Layoutumschaltung"
+
+#: ../setup/vars.py:63
+msgid "Configure Layout Switch"
+msgstr "Layoutumschaltung konfigurieren"
+
+#: ../vkb/vkb.py:64
+msgid "Virtual Keyboard"
+msgstr "Virtuelle Tastatur"
+
+#: ../vkb/vkb_canvas.py:328
+msgid "Geometry"
+msgstr "Geometrie"
+
+#. label style ("Active label only" - On/Off)
+#: ../vkb/vkb_canvas.py:333
+msgid "Active label only"
+msgstr "Nur aktive Beschriftung"
+
+#. suface style ("Gradation surface" - On/Off)
+#: ../vkb/vkb_canvas.py:340
+msgid "Gradation surface"
+msgstr "Abstufungsfläche"
+
+#. window shape style ("Keys only" - On/Off)
+#: ../vkb/vkb_canvas.py:347
+msgid "Keys only window"
+msgstr "Fenster nur für Tasten"
+
+#. window keep below other windows
+#: ../vkb/vkb_canvas.py:354
+msgid "Always below other windows"
+msgstr "Immer unter anderen Fenstern"
+
+#. layout list setup ("Layout list config...")
+#: ../vkb/vkb_canvas.py:363
+msgid "Layout list config..."
+msgstr "Layoutliste konfigurieren..."
+
+#: ../vkb/vkb_canvas.py:372
+msgid "Transparency"
+msgstr "Transparenz"
+
+#. exit menu item
+#: ../vkb/vkb_canvas.py:376
+msgid "Exit"
+msgstr "Beenden"

@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+       "Project-Id-Version: PACKAGE VERSION\n"
+       "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
+       "POT-Creation-Date: 2010-09-06 13:53+0900\n"
+       "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+       "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+       "Language-Team: LANGUAGE <LL@li.org>\n"
+       "MIME-Version: 1.0\n"
+       "Content-Type: text/plain; charset=UTF-8\n"
+       "Content-Transfer-Encoding: 8bit\n"
+
+#: ../setup/vars.py:25
+msgid "XKBC Configuration"
+msgstr "XKBC 配置"
+
+#: ../setup/vars.py:26
+msgid "Virtual Keyboard layout Configuration"
+msgstr "虚拟键盘布局配置"
+
+#: ../setup/vars.py:27
+msgid "Target Layout"
+msgstr "目标布局"
+
+#: ../setup/vars.py:28
+msgid "Physical Layout"
+msgstr "物理布局"
+
+#: ../setup/vars.py:29
+msgid "Hot Keys"
+msgstr "热键"
+
+#: ../setup/vars.py:31
+msgid "_OK"
+msgstr "确定(_O)"
+
+#: ../setup/vars.py:32
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: ../setup/vars.py:33
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../setup/vars.py:35
+msgid "Hot key"
+msgstr "热键"
+
+#: ../setup/vars.py:36
+msgid "Add..."
+msgstr "添加..."
+
+#: ../setup/vars.py:37
+msgid "Delete"
+msgstr "删除"
+
+#: ../setup/vars.py:38
+msgid "_Add"
+msgstr "添加(_A)"
+
+#: ../setup/vars.py:39
+msgid "Please type here."
+msgstr "请在此处键入。"
+
+#: ../setup/vars.py:40
+msgid "Hotkey add dialog"
+msgstr "添加热键对话框"
+
+#: ../setup/vars.py:42 ../vkb/vkb_canvas.py:326
+msgid "Layout"
+msgstr "布局"
+
+#: ../setup/vars.py:43
+msgid "Select"
+msgstr "选择"
+
+#: ../setup/vars.py:44
+msgid "Switch layout hot keys"
+msgstr "切换布局热键"
+
+#: ../setup/vars.py:45
+msgid "Switch layout reverse order hot keys"
+msgstr "反向切换布局热键"
+
+#: ../setup/vars.py:63
+msgid "Configure Layout Switch"
+msgstr "配置布局切换"
+
+#: ../vkb/vkb.py:64
+msgid "Virtual Keyboard"
+msgstr "虚拟键盘"
+
+#: ../vkb/vkb_canvas.py:328
+msgid "Geometry"
+msgstr "几何排列"
+
+#. label style ("Active label only" - On/Off)
+#: ../vkb/vkb_canvas.py:333
+msgid "Active label only"
+msgstr "仅激活标签"
+
+#. suface style ("Gradation surface" - On/Off)
+#: ../vkb/vkb_canvas.py:340
+msgid "Gradation surface"
+msgstr "渐变表面"
+
+#. window shape style ("Keys only" - On/Off)
+#: ../vkb/vkb_canvas.py:347
+msgid "Keys only window"
+msgstr "“仅键”窗口"
+
+#. window keep below other windows
+#: ../vkb/vkb_canvas.py:354
+msgid "Always below other windows"
+msgstr "始终位于其他窗口下面"
+
+#. layout list setup ("Layout list config...")
+#: ../vkb/vkb_canvas.py:363
+msgid "Layout list config..."
+msgstr "布局列表配置..."
+
+#: ../vkb/vkb_canvas.py:372
+msgid "Transparency"
+msgstr "透明度"
+
+#. exit menu item
+#: ../vkb/vkb_canvas.py:376
+msgid "Exit"
+msgstr "退出(X)"

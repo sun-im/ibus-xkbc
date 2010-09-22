@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "输入法开发小组">
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "2010 年 1 月">
+]>
+
+<article id="index" lang="zh_CN">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>&appname; 手册</title> 
+	 <abstract role="description">
+	   <para>&appname; 可模仿各种键盘布局。</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo>本手册介绍了 &appname; 的版本 &appversion;。</releaseinfo>
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>&appname; 手册 V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>介绍</title>
+	<para>
+此 iBus 输入法引擎 (ibus-xkbc) 可通过使用 XKeyboard 配置数据库 (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>) 模仿键盘布局。它支持 XKeyboardConfig 定义的所有布局（包括变体）。
+	</para>
+	<para>
+可使用 iBus 触发键激活输入法。激活输入法后，可使用热键或 iBus 引擎面板中的弹出式菜单来切换不同的键盘布局。
+	</para>
+	<figure id="engine_menu">
+		<title>引擎弹出式菜单</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>启动 &appname;</title>
+	<para>按照步骤设置 &appname;。</para>
+	<orderedlist>
+		<listitem>
+			<para>从 iBus 图标选择&#8220;iBus 设置&#8221;或执行 "/usr/bin/ibus-setup"。</para>
+
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>单击&#8220;输入法&#8221;选项卡</para>
+
+		</listitem>
+		<listitem>
+			<para>单击&#8220;选择输入法&#8221;组合框，然后选择&#8220;其他&#8221;->&#8220;XKBC（键盘模仿）&#8221;</para>
+
+		</listitem>
+		<listitem>
+			<para>单击面板右上部的&#8220;添加&#8221;按钮</para>
+
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>如果希望将其用作缺省输入法，请使用&#8220;向上&#8221;按钮将它置于列表顶部。</para>
+
+			<note><para>如果已将其设置为缺省输入法，仅使用输入法触发键即可激活 ibus-xkbc。否则，您需要在 iBus 图标菜单中选择 ibus-xkbc，或使用用于更改输入法的 iBus 热键将输入法更改为 ibus-xkbc。</para></note>
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>使用情况</title>
+	<para>如何使用 &appname;。</para>
+	<orderedlist>
+		<listitem>
+			<para>在应用程序的输入字段中给出输入焦点。</para>
+		</listitem>
+		<listitem>
+			<para> 键入 iBus 输入法触发键（可通过&#8220;iBus 设置&#8221;对话框 (/usr/bin/ibus-setup) 进行配置）。缺省的触发键是 Ctrl + 空格键、Zenkaku_Hankaku、Alt + Zenkaku_Hankaku 和 Alt + grave 组合键。 </para>
+
+			<note><para>如果未将 ibus-xkbc 设置为缺省输入法，则从 iBus 图标菜单中选择&#8220;XKBC（键盘模仿）&#8221;。</para></note>
+
+		</listitem>
+		<listitem>
+			<para>通过单击 ibus-xkbc 面板的&#8220;配置布局切换&#8221;按钮（面板右侧的第二个按钮）打开&#8220;ibus-xkbc 设置&#8221;对话框。</para>
+
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>在&#8220;目标布局&#8221;选项卡中，选中要用于布局模仿的布局。单击最左侧的三角形可展开布局，以显示布局变体。</para>
+
+		</listitem>
+		<listitem>
+			<para>在&#8220;物理布局&#8221;选项卡中，选中要使用的键盘。</para>
+
+			<note><para>如果使用的是 XKB 设置，则在此处选择 XKB 识别的键盘布局。如果此信息不正确，布局模仿将不能正常运行。</para></note>
+		</listitem>
+		<listitem>
+			<para>在&#8220;热键&#8221;选项卡中，可以配置布局切换热键。仅当在步骤 4 中选中了多个键盘布局时，才可以执行此步骤。</para>
+
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>然后，ibus-xkbc 将模仿正在键入的键字符，应用程序会收到模仿的字符。当您再次键入输入法触发键时，将会取消激活输入法，布局模仿也将停止。</para>
+</sect1>
+<sect1 id="layouts">
+	<title>支持的布局</title>
+	<para>支持的布局取决于 ibus-xkbc 所基于的 XKeyboardConfig 规则/符号数据。此版本的 ibus-xkbc 含有 XKeyboardConfig 1.6 中的数据，布局数（包括变体）为 478。</para>
+</sect1>
+
+</article>

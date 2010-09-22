@@ -24,4 +24,5 @@ export LIBEXECDIR=@libexecdir@
 export XKBC_SETUPDIR=@prefix@/share/ibus-xkbc/setup
 export XKBC_DATAFILE=@prefix@/share/ibus-xkbc/data/xkbc.dat
 export XKB_DATA_DIR=@prefix@/X11/share/X11/xkb
+export XKBC_LOCALE_DIR=@prefix@/share/locale
 exec python2.6 @prefix@/share/ibus-xkbc/engine/main.py $@

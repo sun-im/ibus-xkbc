@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "입력기 장치">
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "2010년 1월">
+]>
+
+<article id="index" lang="ko">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>&appname; 설명서</title> 
+	 <abstract role="description">
+	   <para>&appname;에서 다양한 키보드 레이아웃을 에뮬레이트합니다.</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo>이 설명서에서는 &appname;의 &appversion; 버전에 대해 설명합니다. </releaseinfo>
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>&appname; 설명서 V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>소개</title>
+	<para>
+이 iBus용 입력기 엔진(ibus-xkbc)은 XKeyboard 구성 데이터베이스(<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>)를 사용하여 키보드 레이아웃을 에뮬레이트합니다. 변형을 포함하여 XKeyboardConfig에서 정의하는 모든 레이아웃을 지원합니다.
+	</para>
+	<para>
+입력기는 iBus 트리거 키로 활성화됩니다. 활성화되면 iBus 엔진 패널의 단축 키 또는 팝업 메뉴를 사용하여 다른 키보드 레이아웃으로 전환할 수 있습니다.
+	</para>
+	<figure id="engine_menu">
+		<title>엔진 팝업 메뉴</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>&appname; 시작</title>
+	<para>&appname; 설정 단계</para>
+	<orderedlist>
+		<listitem>
+			<para>iBus 아이콘에서 iBus 설정을 선택하거나 '/usr/bin/ibus-setup'을 실행합니다.</para>
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>'입력기' 탭을 누릅니다.</para>
+		</listitem>
+		<listitem>
+			<para>'입력기 선택' 콤보 상자를 누르고 '기타' -> 'XKBC(키보드 에뮬레이션)'를 선택합니다.</para>
+		</listitem>
+		<listitem>
+			<para>패널의 오른쪽 상단에 있는 '추가' 버튼을 누릅니다.</para>
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>기본 입력기로 이를 사용하려면 '위로' 버튼을 사용하여 목록의 맨 위에 배치합니다.</para>
+			<note><para>기본 입력기로 설정되면 입력기 트리거 키가 ibus-xkbc를 활성화합니다. 그렇지 않으면 iBus 아이콘 메뉴에서 ibus-xkbc를 선택하거나 입력기 변경에 대한 iBus 단축 키를 사용하여 입력기를 ibus-xkbc로 변경해야 합니다.</para></note>
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>사용법</title>
+	<para>&appname; 사용 방법입니다.</para>
+	<orderedlist>
+		<listitem>
+			<para>응용 프로그램의 입력 필드에 입력 포커스를 둡니다.</para>
+		</listitem>
+		<listitem>
+			<para> iBus 설정 대화 상자(/usr/bin/ibus-setup)로 구성할 수 있는 iBus 입력기 트리거 키를 입력합니다. 기본값은 Ctrl+스페이스, Zenkaku_Hankaku, Alt+Zenkaku_Hankaku 및 Alt+억음 부호입니다. </para>
+			<note><para>ibus-xkbc를 기본 입력기로 설정하지 않으면 iBus 아이콘 메뉴에서 'XKBC(키보드 에뮬레이션)'를 선택합니다.</para></note>
+		</listitem>
+		<listitem>
+			<para>ibus-xkbc 패널 '레이아웃 전환 구성' 버튼(패널에서 오른쪽 두 번째 버튼)을 누르면 ibus-xkbc 설정 대화 상자가 표시됩니다.</para>
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>'대상 레이아웃' 탭에서 레이아웃 에뮬레이션에 사용하려는 레이아웃을 선택합니다. 가장 왼쪽의 삼각형을 누르면 레이아웃 변형이 표시되도록 확장됩니다.</para>
+		</listitem>
+		<listitem>
+			<para>'물리적 레이아웃' 탭에서 사용 중인 키보드를 선택합니다.</para>
+			<note><para>XKB 설정을 사용 중이면 여기에서 XKB 인식 키보드 레이아웃을 선택합니다. 이 정보가 정확하지 않으면 레이아웃 에뮬레이션이 제대로 작동하지 않습니다.</para></note>
+		</listitem>
+		<listitem>
+			<para>'단축 키' 탭에서 단축 키를 전환할 레이아웃을 구성할 수 있습니다. 단계 4에서 복수 키보드 레이아웃을 선택한 경우에만 적용됩니다.</para>
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>그런 다음 키 문자 입력이 ibus-xkb에서 에뮬레이트되고 응용 프로그램이 에뮬레이트된 문자를 받습니다. 입력기 트리커 키를 한 번 더 입력하면 입력기가 비활성화되고 레이아웃 에뮬레이션이 중지됩니다.</para>
+</sect1>
+<sect1 id="layouts">
+	<title>지원되는 레이아웃</title>
+	<para>지원되는 레이아웃은 ibus-xkbc를 기반으로 하는 XKeyboardConfig 규칙/기호 데이터에 따라 다릅니다. 이 릴리스의 ibus-xkbc에는 XKeyboardConfig 1.6의 데이터가 있고 변형을 포함한 레이아웃 개수는 478입니다.</para>
+</sect1>
+
+</article>

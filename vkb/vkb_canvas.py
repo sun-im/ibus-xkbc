@@ -27,6 +27,8 @@ from vkb_key import *
 from vkb_keymodel import *
 from vkb_config import *
 
+_ = lambda a : gettext.dgettext("ibus-xkbc", a)
+
 class VKBCanvas(gtk.DrawingArea):
 
     def set_state(self, state):

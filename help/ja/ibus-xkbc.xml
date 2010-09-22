@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "入力方式開発">
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "2010 年 1 月">
+]>
+
+<article id="index" lang="ja">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>&appname;マニュアル</title> 
+	 <abstract role="description">
+	   <para>&appname; は、さまざまなキー配列をエミュレートします。</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo> このマニュアルは &appname; のバージョン &appversion; について説明します。 </releaseinfo>
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>&appname; のマニュアル V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>はじめに</title>
+	<para>
+この iBus 向け入力方式エンジン (ibus-xkbc) は、XKeyboard 構成データベース (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>) を使用してキー配列をエミュレートします。これは、バリアントを含む、XKeyboardConfig が定義するすべての配列をサポートします。
+	</para>
+	<para>
+この入力方式は、iBus トリガーキーを使用して有効にします。有効にしたら、ホットキー、または「iBus」エンジンパネルのポップアップメニューを使用して、異なるキー配列に切り替えることができます。
+	</para>
+	<figure id="engine_menu">
+		<title>エンジンのポップアップメニュー</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>&appname; の起動</title>
+	<para>&appname; の設定手順。</para>
+	<orderedlist>
+		<listitem>
+			<para>iBus アイコンから iBus の設定を選択するか、「/usr/bin/ibus-setup」を実行します。</para>
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>「入力方式」タブをクリックします</para>
+		</listitem>
+		<listitem>
+			<para>「入力方式の選択」コンボボックスをクリックして、「その他」->「XKBC (キーボードエミュレーション)」を選択します</para>
+		</listitem>
+		<listitem>
+			<para>パネルの右上にある「追加」ボタンをクリックします</para>
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>これをデフォルトの入力方式として使用する場合は、「上へ」ボタンを使用して一覧の一番上に配置します。</para>
+			<note><para>デフォルトの入力方式に設定すると、入力方式トリガーキーを入力するだけで ibus-xkbc が有効になります。そうでない場合、iBus アイコンメニューで「ibus-xkbc」を選択するか、入力方式を変更するための iBus ホットキーで入力方式を ibus-xkbc に変更する必要があります。</para></note>
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>使い方</title>
+	<para>&appname; の使い方。</para>
+	<orderedlist>
+		<listitem>
+			<para>入力フォーカスをアプリケーションの入力フィールドに移動します。</para>
+		</listitem>
+		<listitem>
+			<para> iBus 設定ダイアログ (/usr/bin/ibus-setup) で設定できる iBus 入力方式トリガーキーを入力します。デフォルトは、Control+スペース、半角/全角、Alt+半角/全角、および Alt+グラーブです。 </para>
+			<note><para>デフォルトの入力方式として ibus-xkbc を設定していない場合は、iBus アイコンメニューから「XKBC (キーボードエミュレーション)」を選択します。</para></note>
+		</listitem>
+		<listitem>
+			<para>ibus-xkbc パネルの「配列切り替えの設定」ボタン (パネル上の右から 2 つめのボタン) をクリックして、ibus-xkbc 設定ダイアログを表示します。</para>
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>「ターゲット配列」タブで、配列エミュレーションに使用する配列にチェックを入れます。一番左の三角形をクリックして展開すると、配列のバリアントが表示されます。</para>
+		</listitem>
+		<listitem>
+			<para>「物理配列」タブで、使用しているキーボードにチェックを入れます。</para>
+			<note><para>XKB 設定を使用している場合は、ここで XKB が認識するキー配列を選択します。この情報が正しくないと、配列エミュレーションは正常に機能しません。</para></note>
+		</listitem>
+		<listitem>
+			<para>「ホットキー」タブで、配列切り替えのホットキーを設定できます。これは、手順 4 で複数のキー配列にチェックを入れた場合にだけ意味があります。</para>
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>そのあと、キー文字の入力が ibus-xkbc によってエミュレートされ、アプリケーションはエミュレートされた文字を受け取ります。入力方式トリガーキーをもう一度入力すると、入力方式が無効になり、配列エミュレーションは停止します。</para>
+</sect1>
+<sect1 id="layouts">
+	<title>サポートされる配列</title>
+	<para>サポートされる配列は、ibus-xkbc がベースにする XKeyboardConfig 規則/記号のデータに依存します。このリリースの ibus-xkbc には XKeyboardConfig 1.6 のデータが含まれており、バリアントを含む配列の数は 478 個です。</para>
+</sect1>
+
+</article>

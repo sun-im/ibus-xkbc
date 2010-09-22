@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+       "Project-Id-Version: PACKAGE VERSION\n"
+       "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
+       "POT-Creation-Date: 2010-09-06 13:53+0900\n"
+       "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+       "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+       "Language-Team: LANGUAGE <LL@li.org>\n"
+       "MIME-Version: 1.0\n"
+       "Content-Type: text/plain; charset=UTF-8\n"
+       "Content-Transfer-Encoding: 8bit\n"
+
+#: ../setup/vars.py:25
+msgid "XKBC Configuration"
+msgstr "Configuración de XKBC"
+
+#: ../setup/vars.py:26
+msgid "Virtual Keyboard layout Configuration"
+msgstr "Configuración de la disposición del teclado virtual"
+
+#: ../setup/vars.py:27
+msgid "Target Layout"
+msgstr "Disposición de destino"
+
+#: ../setup/vars.py:28
+msgid "Physical Layout"
+msgstr "Disposición física"
+
+#: ../setup/vars.py:29
+msgid "Hot Keys"
+msgstr "Teclas de acceso rápido"
+
+#: ../setup/vars.py:31
+msgid "_OK"
+msgstr "_Aceptar"
+
+#: ../setup/vars.py:32
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: ../setup/vars.py:33
+msgid "_Help"
+msgstr "Ay_uda"
+
+#: ../setup/vars.py:35
+msgid "Hot key"
+msgstr "Tecla de acceso rápido"
+
+#: ../setup/vars.py:36
+msgid "Add..."
+msgstr "Agregar..."
+
+#: ../setup/vars.py:37
+msgid "Delete"
+msgstr "Eliminar"
+
+#: ../setup/vars.py:38
+msgid "_Add"
+msgstr "_Agregar"
+
+#: ../setup/vars.py:39
+msgid "Please type here."
+msgstr "Escriba aquí."
+
+#: ../setup/vars.py:40
+msgid "Hotkey add dialog"
+msgstr "Cuadro de diálogo para agregar tecla de acceso rápido"
+
+#: ../setup/vars.py:42 ../vkb/vkb_canvas.py:326
+msgid "Layout"
+msgstr "Disposición"
+
+#: ../setup/vars.py:43
+msgid "Select"
+msgstr "Seleccionar"
+
+#: ../setup/vars.py:44
+msgid "Switch layout hot keys"
+msgstr "Teclas de acceso rápido para alternar de disposición"
+
+#: ../setup/vars.py:45
+msgid "Switch layout reverse order hot keys"
+msgstr "Teclas de acceso rápido para alternar de disposición en orden inverso"
+
+#: ../setup/vars.py:63
+msgid "Configure Layout Switch"
+msgstr "Configurar alternancia de disposición"
+
+#: ../vkb/vkb.py:64
+msgid "Virtual Keyboard"
+msgstr "Teclado virtual"
+
+#: ../vkb/vkb_canvas.py:328
+msgid "Geometry"
+msgstr "Geometría"
+
+#. label style ("Active label only" - On/Off)
+#: ../vkb/vkb_canvas.py:333
+msgid "Active label only"
+msgstr "Sólo etiqueta activa"
+
+#. suface style ("Gradation surface" - On/Off)
+#: ../vkb/vkb_canvas.py:340
+msgid "Gradation surface"
+msgstr "Superficie de gradación"
+
+#. window shape style ("Keys only" - On/Off)
+#: ../vkb/vkb_canvas.py:347
+msgid "Keys only window"
+msgstr "Ventana Sólo teclas"
+
+#. window keep below other windows
+#: ../vkb/vkb_canvas.py:354
+msgid "Always below other windows"
+msgstr "Siempre por debajo del resto de ventanas"
+
+#. layout list setup ("Layout list config...")
+#: ../vkb/vkb_canvas.py:363
+msgid "Layout list config..."
+msgstr "Configuración de lista de disposiciones..."
+
+#: ../vkb/vkb_canvas.py:372
+msgid "Transparency"
+msgstr "Transparencia"
+
+#. exit menu item
+#: ../vkb/vkb_canvas.py:376
+msgid "Exit"
+msgstr "Salir"

@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "Eingabemethode">
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "Januar 2010">
+]>
+
+<article id="index" lang="de">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>&appname; Handbuch</title> 
+	 <abstract role="description">
+	   <para>&appname; emuliert verschiedene Tastaturlayouts.</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo> In diesem Handbuch wird Version &appversion; von &appname; beschrieben. </releaseinfo>
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>&appname; Handbuch V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>Einf&#252;hrung</title>
+
+	<para>
+Diese Eingabemethoden-Engine f&#252;r iBus (ibus-xkbc) emuliert das Tastaturlayout &#252;ber die XKeyboard-Konfigurationsdatenbank (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>). Es werden alle Layouts unterst&#252;tzt, die von XKeyboardConfig definiert werden (einschlie&#223;lich Varianten).
+
+	</para>
+	<para>
+Die Eingabemethode wird durch die iBus-Aktivierungstaste aktiviert. Nach der Aktivierung k&#246;nnen Sie die verschiedenen Tastaturlayouts mit den Hotkeys oder &#252;ber das Kontextmen&#252; im Bereich der iBus-Engine ausw&#228;hlen.
+
+	</para>
+	<figure id="engine_menu">
+		<title>Kontextmen&#252; der Engine</title>
+
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>&appname; starten</title>
+	<para>F&#252;hren Sie die Einrichtung von &appname; durch.</para>
+
+	<orderedlist>
+		<listitem>
+			<para>W&#228;hlen Sie die iBus-Einrichtung &#252;ber das iBus-Symbol oder f&#252;hren Sie die Datei '/usr/bin/ibus-setup' aus.</para>
+
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Klicken Sie auf die Registerkarte 'Eingabemethode'.</para>
+		</listitem>
+		<listitem>
+			<para>Klicken Sie auf das Kombinationsfeld 'Eingabemethode ausw&#228;hlen' und w&#228;hlen Sie 'Andere' -> 'XKBC (Tastaturemulation)'</para>
+
+		</listitem>
+		<listitem>
+			<para>Klicken Sie oben rechts im Bereich auf die Schaltfl&#228;che 'Hinzuf&#252;gen'.</para>
+
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Verschieben Sie mit der Schaltfl&#228;che 'Nach oben' den Eintrag an die oberste Stelle in der Liste, wenn Sie diese Option als standardm&#228;&#223;ige Eingabemethode verwenden m&#246;;chten.</para>
+
+			<note><para>Wenn Sie sie als standardm&#228;&#223;ige Eingabemethode festlegen, wird durch die Aktivierungstaste der Eingabemethode ibus-xkbc aktiviert. Andernfalls m&#252;;ssen Sie ibus-xkbc im iBus-Symbolmen&#252; ausw&#228;hlen oder mit den iBus-Hotkeys zum &#196;ndern der Eingabemethode die Eingabemethode in ibus-xkbc &#228;ndern.</para></note>
+
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>Verwendung</title>
+	<para>Verwendung von &appname;.</para>
+	<orderedlist>
+		<listitem>
+			<para>Setzen Sie den Fokus auf das Eingabefeld der Anwendung.</para>
+		</listitem>
+		<listitem>
+			<para> Dr&#252;cken Sie die iBus-Eingabemethode-Aktivierungstaste, die Sie im Dialogfeld zur iBus-Einrichtung konfigurieren k&#246;nnen (/usr/bin/ibus-setup). Standardm&#228;&#223;ig gilt: Strg+Leertaste, Zenkaku_Hankaku, Alt+Zenkaku_Hankaku und Alt+Gravis. </para>
+
+			<note><para>Wenn Sie ibus-xkbc nicht als standardm&#228;&#223;ige Eingabemethode konfigurieren, w&#228;;hlen Sie 'XKBC (Tastaturemulation)' aus dem iBus-Symbolmen&#252;.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Rufen Sie das Dialogfeld f&#252;r die Einrichtung von ibus-xkbc auf, indem Sie im Bereich f&#252;r ibus-xkbc auf die Schaltfl&#228;che 'Layoutumschaltung konfigurieren' (zweite Schaltfl&#228;che von rechts im Bereich) klicken.</para>
+
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Aktivieren Sie auf der Registerkarte 'Ziellayout' die Layouts, die Sie f&#252;r die Layoutemulation verwenden m&#246;chten. Indem Sie auf das Dreiecksymbol links au&#223;en klicken, wird die Ansicht der Layoutvarianten erweitert.</para>
+
+		</listitem>
+		<listitem>
+			<para>Aktivieren Sie auf der Registerkarte 'Physisches Layout' die verwendete Tastatur.</para>
+			<note><para>Wenn Sie die XKB-Einstellung verwenden, w&#228;hlen Sie hier das von XKB erkannte Tastaturlayout. Wenn diese Informationen nicht richtig sind, funktioniert die Layoutemulation nicht ordnungsgem&#228;&#223;.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Auf der Registerkarte 'Hotkeys' k&#246;nnen Sie die Hotkeys f&#252;r die Layoutumschaltung konfigurieren. Dies ist nur erforderlich, wenn Sie in Schritt 4 die verschiedenen Tastaturlayouts ausgew&#228;hlt haben.</para>
+
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>Dadurch wird die Eingabe von Tastenzeichen von ibus-xkbc emuliert und die Anwendung erh&#228;lt emulierte Zeichen. Wenn Sie ein weiteres Mal die Eingabemethoden-Aktivierungstaste dr&#252;cken, wird die Eingabemethode deaktiviert und die Layoutemulation angehalten.</para>
+
+</sect1>
+<sect1 id="layouts">
+	<title>Unterst&#252;tzte Layouts</title>
+
+	<para>Die unterst&#252;tzten Layouts h&#228;ngen von den Daten der XKeyboardConfig-Regeln/Symbole ab, auf denen ibus-xkbc basiert. Diese Version von ibus-xkbc erh&#228;lt die Daten von XKeyboardConfig 1.6 und die Anzahl der Layoutvarianten betr&#228;gt 478.</para>
+
+</sect1>
+
+</article>

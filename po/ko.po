@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+       "Project-Id-Version: PACKAGE VERSION\n"
+       "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
+       "POT-Creation-Date: 2010-09-06 13:53+0900\n"
+       "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+       "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+       "Language-Team: LANGUAGE <LL@li.org>\n"
+       "MIME-Version: 1.0\n"
+       "Content-Type: text/plain; charset=UTF-8\n"
+       "Content-Transfer-Encoding: 8bit\n"
+
+#: ../setup/vars.py:25
+msgid "XKBC Configuration"
+msgstr "XKBC 구성"
+
+#: ../setup/vars.py:26
+msgid "Virtual Keyboard layout Configuration"
+msgstr "가상 키보드 레이아웃 구성"
+
+#: ../setup/vars.py:27
+msgid "Target Layout"
+msgstr "대상 레이아웃"
+
+#: ../setup/vars.py:28
+msgid "Physical Layout"
+msgstr "물리적 레이아웃"
+
+#: ../setup/vars.py:29
+msgid "Hot Keys"
+msgstr "단축 키"
+
+#: ../setup/vars.py:31
+msgid "_OK"
+msgstr "확인(_O)"
+
+#: ../setup/vars.py:32
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: ../setup/vars.py:33
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: ../setup/vars.py:35
+msgid "Hot key"
+msgstr "단축 키"
+
+#: ../setup/vars.py:36
+msgid "Add..."
+msgstr "추가..."
+
+#: ../setup/vars.py:37
+msgid "Delete"
+msgstr "삭제"
+
+#: ../setup/vars.py:38
+msgid "_Add"
+msgstr "추가(_A)"
+
+#: ../setup/vars.py:39
+msgid "Please type here."
+msgstr "여기에 입력하십시오."
+
+#: ../setup/vars.py:40
+msgid "Hotkey add dialog"
+msgstr "단축 키 추가 대화 상자"
+
+#: ../setup/vars.py:42 ../vkb/vkb_canvas.py:326
+msgid "Layout"
+msgstr "레이아웃"
+
+#: ../setup/vars.py:43
+msgid "Select"
+msgstr "선택"
+
+#: ../setup/vars.py:44
+msgid "Switch layout hot keys"
+msgstr "레이아웃 단축 키 전환"
+
+#: ../setup/vars.py:45
+msgid "Switch layout reverse order hot keys"
+msgstr "레이아웃 단축 키를 역순으로 전환"
+
+#: ../setup/vars.py:63
+msgid "Configure Layout Switch"
+msgstr "레이아웃 전환 구성"
+
+#: ../vkb/vkb.py:64
+msgid "Virtual Keyboard"
+msgstr "가상 키보드"
+
+#: ../vkb/vkb_canvas.py:328
+msgid "Geometry"
+msgstr "기하학"
+
+#. label style ("Active label only" - On/Off)
+#: ../vkb/vkb_canvas.py:333
+msgid "Active label only"
+msgstr "활성 레이블만"
+
+#. suface style ("Gradation surface" - On/Off)
+#: ../vkb/vkb_canvas.py:340
+msgid "Gradation surface"
+msgstr "그라데이션 표면"
+
+#. window shape style ("Keys only" - On/Off)
+#: ../vkb/vkb_canvas.py:347
+msgid "Keys only window"
+msgstr "키 전용 창"
+
+#. window keep below other windows
+#: ../vkb/vkb_canvas.py:354
+msgid "Always below other windows"
+msgstr "기타 창 항상 아래"
+
+#. layout list setup ("Layout list config...")
+#: ../vkb/vkb_canvas.py:363
+msgid "Layout list config..."
+msgstr "레이아웃 목록 구성..."
+
+#: ../vkb/vkb_canvas.py:372
+msgid "Transparency"
+msgstr "투명"
+
+#. exit menu item
+#: ../vkb/vkb_canvas.py:376
+msgid "Exit"
+msgstr "종료(X)"

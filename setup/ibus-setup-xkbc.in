@@ -21,4 +21,5 @@
 export XKBC_LIBDIR=@prefix@/share/ibus-xkbc/setup/xkbc
 export XKB_DATA_DIR=@prefix@/X11/share/X11/xkb
 export XKBC_DATAFILE=@prefix@/share/ibus-xkbc/data/xkbc.dat
+export XKBC_LOCALE_DIR=@prefix@/share/locale
 exec python2.6 @prefix@/share/ibus-xkbc/setup/main.py $@

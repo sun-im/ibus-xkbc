@@ -43,6 +43,9 @@ def print_help(out, v=0):
 
 def main():
 
+    gettext.bindtextdomain("ibus-xkbc", os.getenv('XKBC_LOCALE_DIR'))
+    gettext.bind_textdomain_codeset("ibus-xkbc", "UTF-8")
+
     shortopt = "ih"
     try:
         opts, args = getopt.getopt(sys.argv[1:], shortopt)

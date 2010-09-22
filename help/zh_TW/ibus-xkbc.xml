@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "輸入法開發團隊">
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "2010 年 1 月">
+]>
+
+<article id="index" lang="zh_TW">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>&appname; 手冊</title> 
+	 <abstract role="description">
+	   <para>&appname; 會模擬各種鍵盤配置。</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo> 本手冊將說明 &appversion; 版的 &appname;。</releaseinfo>
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>&appname; 手冊 V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>簡介</title>
+	<para>
+此種適用於 iBus 的輸入法引擎 (ibus-xkbc) 會模擬使用 XKeyboard 配置資料庫 (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>) 的鍵盤配置。它支援 XKeyboardConfig 定義的所有配置，包括變體。
+	</para>
+	<para>
+此輸入法使用 iBus 觸發鍵來啟用。啟用之後，可以使用快速鍵或 iBus 引擎面板上的快顯功能表來切換不同的鍵盤配置。
+	</para>
+	<figure id="engine_menu">
+		<title>引擎快顯功能表</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>啟動 &appname;</title>
+	<para>按照步驟設定 &appname;。</para>
+	<orderedlist>
+		<listitem>
+			<para>從 iBus 圖示選取 iBus 安裝程式或執行「/usr/bin/ibus-setup」。</para>
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>按一下 [輸入法] 標籤</para>
+		</listitem>
+		<listitem>
+			<para>按一下 [選取輸入法] 組合方塊，然後選取 [其他] -> [XKBC (鍵盤模擬)]</para>
+		</listitem>
+		<listitem>
+			<para>按一下面板右上方的 [增加] 按鈕</para>
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>如果您要將該輸入法用來作為預設輸入法，請使用 [向上] 按鈕將它放在清單頂端。</para>
+			<note><para>如果已將其設定為預設輸入法，只要使用「輸入法」觸發鍵就會啟用 ibus-xkbc。否則，您就需要在 iBus 圖示功能表中選取 ibus-xkbc，或使用 iBus 快速鍵將輸入法變更為 ibus-xkbc，才能變更輸入法。</para></note>
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>用法</title>
+	<para>如何使用 &appname;。</para>
+	<orderedlist>
+		<listitem>
+			<para>為應用程式的輸入欄位提供輸入焦點。</para>
+		</listitem>
+		<listitem>
+			<para> 鍵入可以使用 iBus 設定對話方塊 (/usr/bin/ibus-setup) 配置的 iBus 輸入法觸發鍵。預設值為 Ctrl+ 空格鍵、Zenkaku_Hankaku、Alt+Zenkaku_Hankaku 和 Alt+grave。 </para>
+			<note><para>如果您沒有將 ibus-xkbc 設定為預設輸入法，請從 iBus 圖示功能表中選取 [XKBC (鍵盤模擬)]。</para></note>
+		</listitem>
+		<listitem>
+			<para>按一下 ibus-xkbc 面板的 [設定配置切換] 按鈕 (面板上右邊第二個按鈕) 來啟動 ibus-xkbc 設定對話方塊。</para>
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>在 [目標配置] 標籤中，選取要用來作為配置模擬的配置。按一下最左邊的三角形即可展開以顯示配置變體。</para>
+		</listitem>
+		<listitem>
+			<para>在 [實體配置] 標籤中，核取使用的鍵盤。</para>
+			<note><para>如果您是使用 XKB 設定，則請在此處選取 XKB 可識別的鍵盤配置。如果此資訊不正確，配置模擬便無法正常運作。</para></note>
+		</listitem>
+		<listitem>
+			<para>在 [快速鍵] 標籤中，您可以設定配置切換快速鍵。只有在步驟 4 中核取多個鍵盤配置時，此功能才有用。</para>
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>接著 ibus-xkbc 會模擬按鍵字元，而應用程式會收到模擬的字元。當您再次鍵入輸入法觸發鍵時，會停用輸入法，配置模擬也會停止。</para>
+</sect1>
+<sect1 id="layouts">
+	<title>支援的配置</title>
+	<para>支援的配置取決於 ibus-xkbc 所採用的 XKeyboardConfig 規則/符號資料。此發行版本的 ibus-xkbc 包含來自 XKeyboardConfig 1.6 的資料，配置的數目 (包含變體) 為 478。</para>
+</sect1>
+
+</article>

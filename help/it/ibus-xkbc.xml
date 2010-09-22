@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "Metodo di input (dev)">
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "Gennaio 2010">
+]>
+
+<article id="index" lang="it">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>Manuale di &appname;</title> 
+	 <abstract role="description">
+	   <para>&appname; consente di emulare vari layout di tastiera.</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo>Nel presente manuale &#232; illustrata la versione &appversion; di &appname;.</releaseinfo>
+
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>Manuale di &appname; V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>Introduzione</title>
+	<para>
+Il motore del metodo di input per iBus (ibus-xkbc) emula il layout di tastiera utilizzando il database di configurazione XKeyboard (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>). Supporta tutti i layout definiti da XKeyboardConfig, incluse le varianti.
+	</para>
+	<para>
+Il metodo di input viene attivato tramite il tasto di attivazione iBus. Una volta attivato, per passare da un layout di tastiera all'altro &#232; possibile utilizzare i tasti di scelta rapida o il menu popup nel pannello del motore iBus.
+
+	</para>
+	<figure id="engine_menu">
+		<title>Menu popup motore</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>Avvia &appname;</title>
+	<para>Procedura per configurare &appname;.</para>
+	<orderedlist>
+		<listitem>
+			<para>Selezionare la configurazione iBus dall'icona iBus o eseguire '/usr/bin/ibus-setup'.</para>
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Fare clic sulla scheda Metodo di input</para>
+		</listitem>
+		<listitem>
+			<para>Fare clic sulla casella combinata Seleziona metodo di input e selezionare Altro -> XKBC (emulazione tastiera)</para>
+		</listitem>
+		<listitem>
+			<para>Fare clic sul pulsante Aggiungi, posto nell'angolo superiore destro della finestra</para>
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Se si desidera utilizzarlo come metodo di input predefinito, collocarlo in alto all'elenco tramite il pulsante Su.</para>
+			<note><para>Se &#232; impostato il metodo di input predefinito, un tasto di attivazione del metodo di input consente di attivare ibus-xkbc. In caso contrario, &#232;e; necessario selezionare ibus-xkbc nel menu icone iBus oppure cambiare il metodo di input e impostarlo su ibus-xkbc tramite i tasti di scelta rapida iBus.</para></note>
+
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>Uso</title>
+	<para>Come utilizzare &appname;.</para>
+	<orderedlist>
+		<listitem>
+			<para>Assegnare la funzione di input al campo di input dell'applicazione.</para>
+		</listitem>
+		<listitem>
+			<para> Digitare il tasto di attivazione del metodo di input di iBus, configurabile tramite la finestra di dialogo di configurazione iBus (/usr/bin/ibus-setup). L'impostazione predefinita &#232; Control+spazio, Zenkaku_Hankaku, Alt+Zenkaku_Hankaku e Alt+accento grave. </para>
+
+			<note><para>Se non si imposta ibus-xkbc come metodo di input predefinito, selezionare XKBC (emulazione tastiera) dal menu icone iBus.</para></note>
+		</listitem>
+		<listitem>
+			<para>Visualizzare la finestra di dialogo di configurazione ibus-xkbc facendo clic sul pulsante Configura cambio layout del riquadro ibus-xkbc (il secondo pulsante a destra del riquadro).</para>
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Nella scheda Layout di destinazione, selezionare i layout da utilizzare per l'emulazione del layout. Fare clic con il pulsante sinistro per espandere il triangolo e visualizzare le varianti di layout.</para>
+		</listitem>
+		<listitem>
+			<para>Nella scheda Layout fisico, selezionare la tastiera utilizzata.</para>
+			<note><para>Se si utilizza l'impostazione XKB, selezionare qui il layout di tastiera XKB riconosciuto. Se l'informazione non &#232; esatta, l'emulazione del layout non funzioner&#224;e; correttamente.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Nella scheda Tasti di scelta rapida, &#232; possibile configurare i tasti per passare da un layout all'altro. Ci&#242;e; &#232;e; pertinente solo se si &#232;e; selezionata l'impostazione per il layout di tastiera multiplo al punto 4.</para>
+
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>Quando si digitano caratteri tramite i tasti, questi verranno emulati da ibus-xkbc e all'applicazione vengono inviati i caratteri emulati. Premendo ancora una volta il tasto di attivazione del metodo di input, quest'ultimo viene disattivato e l'emulazione del layout viene interrotta.</para>
+</sect1>
+<sect1 id="layouts">
+	<title>Layout supportati</title>
+	<para>I layout supportati dipendono dai dati delle regole/simboli XKeyboardConfig sui quali si basa ibus-xkbc. Nella presente release di ibus-xkbc sono disponibili i dati di XKeyboardConfig 1.6 e il numero di varianti di layout inclusi &#232; 478.</para>
+
+</sect1>
+
+</article>

@@ -65,8 +65,11 @@ GETTEXT_PACKAGE="$PACKAGE_NAME"
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Define to the read-only architecture-independent data directory.])
 
-AM_GNU_GETTEXT([external])
-AM_GNU_GETTEXT_VERSION(0.16.1)
+ALL_LINGUAS="de es fr it ja ko pt_BR zh_CN zh_TW"
+AM_GLIB_GNU_GETTEXT
+
+#AM_GNU_GETTEXT([external])
+#AM_GNU_GETTEXT_VERSION(0.16.1)
 
 
 # OUTPUT files
@@ -86,6 +89,15 @@ icons/Makefile
 m4/Makefile
 help/Makefile
 help/C/Makefile
+help/de/Makefile
+help/es/Makefile
+help/fr/Makefile
+help/it/Makefile
+help/ja/Makefile
+help/ko/Makefile
+help/zh_CN/Makefile
+help/zh_TW/Makefile
+help/pt_BR/Makefile
 )
 
 AC_OUTPUT

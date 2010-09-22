@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "Input Method dev">
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "Janvier 2010">
+]>
+
+<article id="index" lang="fr">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>Manuel de l'&appname;</title> 
+	 <abstract role="description">
+	   <para>&appname; &#233;mule diverses dispositions du clavier.</para>
+
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo> Ce manuel d&#233;crit la version &appversion; de &appname;. </releaseinfo>
+
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>V&manrevision; du manuel d'&appname;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>Introduction</title>
+	<para>
+Ce moteur de m&#233;thode d'entr&#233;e;e pour iBus (ibus-xkbc) &#233;e;mule la disposition du clavier &#224;e; l'aide de la base de donn&#233;e;es de configuration XKeyboard (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>). Il prend en charge toutes les dispositions d&#233;e;finies par XKeyboardConfig, y compris leurs variantes.
+
+	</para>
+	<para>
+La m&#233;thode d'entr&#233;e;e est activ&#233;e;e &#224;e; l'aide de la touche de raccourci iBus. Une fois activ&#233;e;e, vous pouvez passer d'une disposition de clavier &#224;e; une autre &#224;e; l'aide des raccourcis clavier ou du menu contextuel du panneau du moteur iBus.
+
+	</para>
+	<figure id="engine_menu">
+		<title>Menu contextuel du moteur</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>D&#233;marrer &appname;</title>
+
+	<para>&#201;tape de l'installation d'&appname;.</para>
+
+	<orderedlist>
+		<listitem>
+			<para>S&#233;lectionnez l'installation d'iBus &#224;e; partir de l'ic&#244;c;ne iBus ou ex&#233;;cutez '/usr/bin/ibus-setup'.</para>
+
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Cliquez sur l'onglet M&#233;thode d'entr&#233;e;e.</para>
+
+		</listitem>
+		<listitem>
+			<para>Cliquez sur la bo&#238;te combin&#233;;e S&#233;e;lectionner une m&#233;e;thode d'entr&#233;e;e, puis s&#233;e;lectionnez Autre -> XKBC (&#233;e;mulation du clavier)</para>
+
+		</listitem>
+		<listitem>
+			<para>Cliquez sur le bouton Ajouter situ&#233; en haut &#224;e; droite du panneau.</para>
+
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Placez-la en haut de la liste &#224; l'aide du bouton Monter si vous souhaitez l'utiliser comme m&#233;e;thode d'entr&#233;e;e par d&#233;e;faut.</para>
+
+			<note><para>Si ibus-xkbc est d&#233;finie comme m&#233;e;thode d'entr&#233;e;e par d&#233;e;faut, sa touche de raccourci suffit &#224;e; l'activer. Sinon, vous devez s&#233;e;lectionner ibus-xkbc dans le menu de l'ic&#244;c;ne iBus ou remplacer la m&#233;;thode d'entr&#233;e;e par ibus-xkbc &#224;e; l'aide des raccourcis clavier correspondants.</para></note>
+
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>Utilisation</title>
+	<para>Utilisation d'&appname;.</para>
+	<orderedlist>
+		<listitem>
+			<para>Faites du champ de saisie de l'application la cible de saisie.</para>
+		</listitem>
+		<listitem>
+			<para> Tapez la touche de raccourci de la m&#233;thode d'entr&#233;e;e d'iBus qui peut &#234;c;tre configur&#233;;e &#224;e; partir de la bo&#238;c;te de dialogue iBus (/usr/bin/ibus-setup). Les touches de raccourci par d&#233;;faut sont Ctrl+Espace, Zenkaku_Hankaku, Alt+Zenkaku_Hankaku et Alt+GR. </para>
+
+			<note><para>Si vous ne configurez pas ibus-xkbc comme m&#233;thode d'entr&#233;e;e par d&#233;e;faut, s&#233;e;lectionnez XKBC (&#233;e;mulation du clavier) dans le menu de l'ic&#244;c;ne iBus.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Affichez la bo&#238;te de dialogue de configuration d'ibus-xkbc en cliquant sur le bouton Configurer le changement de disposition du panneau d'ibus-xkbc (deuxi&#232;;me bouton de droite du panneau).</para>
+
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Dans l'onglet Disposition cible, cochez les dispositions &#224; utiliser lors de l'&#233;e;mulation des dispositions. Cliquer sur le triangle situ&#233;e; &#224;e; l'extr&#233;e;mit&#233;e; gauche permet d'afficher des variantes de disposition.</para>
+
+		</listitem>
+		<listitem>
+			<para>Dans l'onglet Disposition physique, cochez le clavier &#224; utiliser.</para>
+
+			<note><para>Si vous utilisez le param&#232;tre XKB, s&#233;e;lectionnez ici la disposition de clavier reconnue XKB. Si cette information est incorrecte, l'&#233;e;mulation de la disposition ne fonctionne pas correctement.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Dans l'onglet Raccourcis clavier, vous pouvez configurer les raccourcis clavier de changement de disposition. Ceci ne s'applique que si vous avez coch&#233; plusieurs dispositions de clavier &#224;e; l'&#233;e;tape 4.</para>
+
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>La saisie de caract&#232;res du clavier est alors &#233;e;mul&#233;e;e par ibus-xkbc et l'application re&#231;l;oit des caract&#232;e;res &#233;e;mul&#233;e;s. Lorsque vous tapez de nouveau sur la touche de raccourci de la m&#233;e;thode d'entr&#233;e;e, la m&#233;e;thode d'entr&#233;e;e est d&#233;e;sactiv&#233;e;e et l'&#233;e;mulation de la disposition s'arr&#234;c;te.</para>
+
+</sect1>
+<sect1 id="layouts">
+	<title>Dispositions prises en charge</title>
+	<para>Les dispositions prises en charge d&#233;pendent des donn&#233;e;es relatives aux r&#232;e;gles/symboles de XKeyboardConfig sur lesquelles ibus-xkbc se base. Cette version d'ibus-xkbc utilise les donn&#233;e;es de XKeyboardConfig 1.6 et le nombre de dispositions, variantes incluses, s'&#233;e;l&#232;e;ve &#224;e; 478.</para>
+
+</sect1>
+
+</article>

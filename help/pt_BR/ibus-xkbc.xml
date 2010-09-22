@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "Dispositivo de m&#233;todo de entrada">
+
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "Janeiro de 2010">
+]>
+
+<article id="index" lang="pt_BR">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>Manual do &appname;</title> 
+	 <abstract role="description">
+	   <para>&appname; emula v&#225;rios layouts de teclado.</para>
+
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo> Este manual descreve a vers&#227;o &appversion; do &appname;. </releaseinfo>
+
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>&appname; Manual V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>Introdu&#231;&#227;e;o</title>
+
+	<para>
+Este mecanismo de m&#233;todo de entrada para iBus (ibus-xkbc) emula o layout de teclado usando o banco de dados de configura&#231;l;&#227;e;o XKeyboard (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>). Oferece suporte a todos os layouts definidos pelo XKeyboardConfig, incluindo variantes.
+
+	</para>
+	<para>
+O m&#233;todo de entrada &#233;e; ativado pela tecla de disparo do iBus. Depois de ativado, &#233;e; poss&#237;e;vel alternar o layout do teclado atrav&#233;e;s de teclas de atalho ou do menu pop-up no painel do mecanismo iBus.
+
+	</para>
+	<figure id="engine_menu">
+		<title>Menu pop-up do mecanismo</title>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>Iniciar &appname;</title>
+	<para>Etapa de instala&#231;&#227;e;o do &appname;.</para>
+
+	<orderedlist>
+		<listitem>
+			<para>Selecione a instala&#231;&#227;e;o do iBus no &#237;e;cone do iBus ou execute '/usr/bin/ibus-setup'.</para>
+
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Clique na guia 'M&#233;todo de entrada'</para>
+
+		</listitem>
+		<listitem>
+			<para>Clique na caixa de combina&#231;&#227;e;o 'Selecionar um m&#233;e;todo de entrada' e selecione 'Outro' -> 'XKBC (Emula&#231;l;&#227;e;o de teclado)'</para>
+
+		</listitem>
+		<listitem>
+			<para>Clique no bot&#227;o 'Adicionar' na parte superior direita do painel</para>
+
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Coloque-o no topo da lista com o bot&#227;o 'Acima' se desejar us&#225;e;-lo como o m&#233;e;todo de entrada padr&#227;e;o.</para>
+
+			<note><para>Se for definido como o m&#233;todo de entrada padr&#227;e;o, apenas uma tecla de disparo de m&#233;e;todo de entrada ativar&#225;e; o ibus-xkbc. Do contr&#225;e;rio, ser&#225;e; necess&#225;e;rio selecionar ibus-xkbc no menu de &#237;e;cones do iBus ou alterar o m&#233;e;todo de entrada do ibus-xkbc pelas teclas de atalho do iBus para altera&#231;l;&#227;e;o do m&#233;e;todo de entrada.</para></note>
+
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>Uso</title>
+	<para>Como usar o &appname;.</para>
+	<orderedlist>
+		<listitem>
+			<para>Coloque o foco de entrada no campo de entrada do aplicativo.</para>
+		</listitem>
+		<listitem>
+			<para> Digite a tecla de disparo do m&#233;todo de entrada do iBus que pode ser configurada na caixa de di&#225;e;logo de configura&#231;l;&#227;e;o do iBus (/usr/bin/ibus-setup). O padr&#227;e;o &#233;e; Control+espa&#231;l;o, Zenkaku_Hankaku, Alt+Zenkaku_Hankaku e Alt+acento grave. </para>
+
+			<note><para>Se tiver configurado o ibus-xkbc como o m&#233;todo de entrada padr&#227;e;o, selecione 'XKBC (Emula&#231;l;&#227;e;o de teclado)' no menu de &#237;e;cones do iBus.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Exiba a caixa de di&#225;logo de configura&#231;l;&#227;e;o do ibus-xkbc clicando no bot&#227;e;o 'Configurar altern&#226;c;ncia de layout' no painel do ibus-xkbc (o segundo bot&#227;;o direito do painel).</para>
+
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Na guia 'Layout de destino', marque os layouts que deseja usar na emula&#231;&#227;e;o de teclado. Ao clicar no tri&#226;c;ngulo &#224;; esquerda, s&#227;e;o exibidas as varia&#231;l;&#245;e;es de teclado.</para>
+
+		</listitem>
+		<listitem>
+			<para>Na guia 'Layout f&#237;sico', marque o teclado em uso.</para>
+
+			<note><para>Se estiver usando uma configura&#231;&#227;e;o XKB, selecione aqui o layout de teclado XKB reconhecido. Se esta informa&#231;l;&#227;e;o n&#227;e;o for correta, a emula&#231;l;&#227;e;o de layout n&#227;e;o funcionar&#225;e; corretamente.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Na guia 'Teclas de atalho', voc&#234; pode configurar as teclas de atalho para altern&#226;;ncia de layout. Isso &#233;; relevante somente se tiver marcado v&#225;e;rios layouts de teclado na etapa 4.</para>
+
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>Nesse caso, a digita&#231;&#227;e;o de caracteres principais ser&#225;e; emulada pelo ibus-xkbc e o aplicativo receber&#225;e; os caracteres emulados. Ao pressionar uma vez mais a tecla de disparo do m&#233;e;todo de entrada, este ser&#225;e; desativado e a emula&#231;l;&#227;e;o de layout parar&#225;e;.</para>
+
+</sect1>
+<sect1 id="layouts">
+	<title>Layouts suportados</title>
+	<para>Os layouts suportados dependem dos dados de s&#237;mbolos/regras do XKeyboardConfig em que se baseia o ibus-xkbc. Esta vers&#227;e;o do ibus-xkbc possui os dados do XKeyboardConfig 1.6 e o n&#250;e;mero de layouts &#233;e; de 478.</para>
+
+</sect1>
+
+</article>

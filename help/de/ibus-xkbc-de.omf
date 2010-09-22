@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omf>
+  <resource>
+    <creator>
+      Oracle Documentation Team
+    </creator>
+    <maintainer>
+      Oracle Documentation Team
+    </maintainer>
+    <title>
+      Keyboard Layout Emulation Input Method (XKBC)
+    </title>
+    <date>
+      2010-01
+    </date>
+    <version identifier="1.0" date="2010-01-13" description="program version 1.0.0"/>
+    <subject category="GNOME|Utilities"/>
+    <description>
+      User manual for the Keyboard Layout Emulation Input Method (XKBC).
+    </description>
+    <type>
+      user's guide
+    </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="ibus-xkbc.xml"/>
+    <language code="de"/>
+    <relation seriesid="00dc1156-d4c6-11d8-9917-c62edd84afcc"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Oracle and/or its affiliates"/>
+  </resource>        
+</omf>

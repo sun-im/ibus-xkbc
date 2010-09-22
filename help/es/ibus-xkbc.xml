@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+  <!ENTITY legal SYSTEM "legal.xml">
+  <!ENTITY appname "iBus XKBC">
+  <!ENTITY author1 "Oracle">
+  <!ENTITY author2 "Dispositivo de m&#233;todo de entrada">
+
+  <!ENTITY publisher "Oracle">
+  <!ENTITY appversion "1.0">
+  <!ENTITY manrevision "1.0">
+  <!ENTITY date "Enero de 2010">
+]>
+
+<article id="index" lang="es">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+	 <title>Manual de &appname;</title> 
+	 <abstract role="description">
+	   <para>&appname; emula varias disposiciones de teclado.</para>
+	 </abstract>
+	 <copyright>
+	   <year>2010</year>
+	   <holder>&publisher;</holder>
+	 </copyright>	 
+
+&legal;
+<!-- This file  contains link to license for the documentation (GNU FDL), and 
+     other legal stuff such as "NO WARRANTY" statement. Please do not change 
+     any of this. -->
+
+	 <authorgroup> 
+		<author> 
+		  <firstname>&author1;</firstname> 
+		  <surname>&author2;</surname> 
+		  <affiliation> 
+			 <orgname>&publisher;</orgname> 
+		  </affiliation> 
+		</author> 
+	 </authorgroup>
+	 
+	 <releaseinfo>Este manual describe la versi&#243;n &appversion; de &appname;.</releaseinfo>
+
+	 
+	 <revhistory>
+	   <revision>
+		<revnumber>Manual de &appname; V&manrevision;</revnumber> <date>&date;</date>
+	   </revision>
+	  </revhistory>
+  </articleinfo>
+  <indexterm> <primary>&appname;</primary> </indexterm>
+<sect1 id="intro">
+	<title>Introducci&#243;n</title>
+
+	<para>
+Este motor de m&#233;todo de entrada para iBus (ibus-xkbc) emula la disposici&#243;e;n del teclado mediante la base de datos de configuraciones XKeyboard (<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig/">XKeyboardConfig</ulink>). Admite todas las disposiciones que define XKeyboardConfig, incluidas las variaciones.
+
+	</para>
+	<para>
+El m&#233;todo de entrada se activa con la tecla de activaci&#243;e;n de iBus. Una vez activado, es posible cambiar a una disposici&#243;e;n de teclado distinta mediante las teclas de acceso r&#225;e;pido o el men&#250;e; emergente en el panel del motor iBus.
+
+	</para>
+	<figure id="engine_menu">
+		<title>Men&#250; emergente del motor</title>
+
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="figures/engine_menu.png" format="PNG"/>
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</figure>
+</sect1>
+<sect1 id="getting-stated">
+	<title>Iniciar &appname;</title>
+	<para>Paso de la configuraci&#243;n de &appname;.</para>
+
+	<orderedlist>
+		<listitem>
+			<para>Seleccione la configuraci&#243;n de iBus desde el icono de iBus o ejecute '/usr/bin/ibus-setup'.</para>
+
+			<figure id="ibus_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Haga clic en la ficha M&#233;todo de entrada.</para>
+
+		</listitem>
+		<listitem>
+			<para>Haga clic en el cuadro combinado Seleccionar un m&#233;todo de entrada y seleccione Otros -> XKBC (emulaci&#243;e;n de teclado).</para>
+
+		</listitem>
+		<listitem>
+			<para>Haga clic en el bot&#243;n Agregar en la parte superior derecha del panel.</para>
+
+			<figure id="ibus_setup_im">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/ibus_setup_im.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>Col&#243;quelo al principio de la lista con el bot&#243;e;n Arriba si quiere usarlo como m&#233;e;todo de entrada predeterminado.</para>
+
+			<note><para>Si se define como m&#233;todo de entrada predeterminado, ibus-xkbc se activar&#225;e; mediante una tecla de activaci&#243;e;n de m&#233;e;todo de entrada. De lo contrario, tendr&#225;e; que seleccionar ibus-xkbc en el men&#250;e; del icono iBus, o bien cambiar el m&#233;e;todo de entrada a ibus-xkbc con las teclas de acceso r&#225;e;pido de iBus para cambiar el m&#233;e;todo de entrada.</para></note>
+
+		</listitem>
+	</orderedlist>
+</sect1>
+<sect1 id="usage">
+	<title>Uso</title>
+	<para>C&#243;mo usar &appname;.</para>
+
+	<orderedlist>
+		<listitem>
+			<para>D&#233; preferencia de entrada al campo de entrada de la aplicaci&#243;e;n.</para>
+
+		</listitem>
+		<listitem>
+			<para> Pulse la tecla de activaci&#243;n del m&#233;e;todo de entrada iBus, que se puede configurar con el cuadro de di&#225;e;logo de configuraci&#243;e;n de iBus (/usr/bin/ibus-setup). La tecla de activaci&#243;e;n predeterminada es Control+espacio, Zenkaku_Hankaku, Alt+Zenkaku_Hankaku y Alt+acento grave. </para>
+
+			<note><para>Si no define ibus-xkbc como m&#233;todo de entrada predeterminado, seleccione XKBC (emulaci&#243;e;n de teclado) en el men&#250;e; del icono de iBus.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>Abra el cuadro de di&#225;logo de configuraci&#243;e;n de ibus-xkbc; para ello, en el panel ibus-xkbc haga clic en el bot&#243;e;n Configurar alternancia de disposici&#243;e;n (el segundo bot&#243;e;n situado en la parte derecha del panel).</para>
+
+			<figure id="xkbc_setup">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+		<listitem>
+			<para>En la ficha Disposici&#243;n de destino, seleccione las disposiciones que desee usar para la emulaci&#243;e;n de la disposici&#243;e;n. Al hacer clic, el tri&#225;e;ngulo situado m&#225;e;s a la izquierda se expande para mostrar las posibles variaciones de disposiciones.</para>
+
+		</listitem>
+		<listitem>
+			<para>En la ficha Disposici&#243;n f&#237;e;sica, seleccione el teclado en uso.</para>
+
+			<note><para>Si usa la opci&#243;n XKB, seleccione aqu&#237;e; la disposici&#243;e;n de teclado XKB reconocida. Si la informaci&#243;e;n no es correcta, la emulaci&#243;e;n de la disposici&#243;e;n no funcionar&#225;e; correctamente.</para></note>
+
+		</listitem>
+		<listitem>
+			<para>En la ficha Teclas de acceso r&#225;pido, puede configurar las teclas de acceso r&#225;e;pido para alternar de disposici&#243;e;n. Este aspecto s&#243;e;lo es importante si ha seleccionado varias disposiciones de teclado en el paso 4.</para>
+
+			<figure id="xkbc_setup_hk">
+			<screenshot>
+				<imageobject>
+					<imagedata fileref="figures/xkbc_setup_hk.png" format="PNG"/>
+				</imageobject>
+			</screenshot>
+			</figure>
+		</listitem>
+	</orderedlist>
+	<para>ibus-xkbc emular&#225; la escritura de los caracteres principales y la aplicaci&#243;e;n recibir&#225;e; los caracteres emulados. Si pulsa la tecla de activaci&#243;e;n del m&#233;e;todo de entrada una vez m&#225;e;s, el m&#233;e;todo de entrada se desactivar&#225;e; y la emulaci&#243;e;n de la disposici&#243;e;n se detendr&#225;e;.</para>
+
+</sect1>
+<sect1 id="layouts">
+	<title>Disposiciones admitidas</title>
+	<para>Las disposiciones admitidas dependen de los datos de s&#237;mbolos y reglas de XKeyboardConfig en los que ibus-xkbc se puede basar. Esta versi&#243;e;n de ibus-xkbc contiene los datos de XKeyboardConfig 1.6 y el n&#250;e;mero de disposiciones que incluyen variaciones es de 478.</para>
+
+</sect1>
+
+</article>

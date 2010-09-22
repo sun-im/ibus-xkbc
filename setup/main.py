@@ -21,6 +21,8 @@
 import gtk
 import getopt
 import sys
+import os
+import gettext
 
 import layout
 import hotkey
@@ -64,6 +66,9 @@ def main():
         opts, args = getopt.getopt(sys.argv[1:], shortopt)
     except:
         print_help(sys.stderr, 1)
+
+    gettext.bindtextdomain("ibus-xkbc", os.getenv('XKBC_LOCALE_DIR'))
+    gettext.bind_textdomain_codeset("ibus-xkbc", "UTF-8")
 
     vkb_mode = False
     for o, a in opts:
